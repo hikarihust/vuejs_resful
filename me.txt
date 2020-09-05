@@ -1,0 +1,17 @@
+                                Installation & Project Setup
+
+Initial Project Setup
+    Tạm thời tắt phần mềm diệt virut và cài đặt project laravel
+        composer create-project --prefer-dist laravel/laravel vuejs_resful
+        Để vào được trang web của dự án thì cần truy cập vào trong folder public, để có thể xóa
+        được public trên link url thì có thể dùng virtual host
+        <VirtualHost *:80>
+            ServerAdmin vuejs_resful.xyz
+            DocumentRoot "C:/xampp/htdocs/vuejs_resful/public"
+            ServerName vuejs_resful.xyz
+            ErrorLog "logs/vuejs_resful.xyz-error.log"
+            CustomLog "logs/vuejs_resful.xyz-access.log" common
+        </VirtualHost>
+    - Remove public trên URL
+    C:\Windows\System32\drivers\etc -----------> hosts
+        127.0.0.1       vuejs_resful.xyz
