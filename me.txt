@@ -26,3 +26,6 @@ Intall authentication system
         -> Ở public folder các file css và js được tạo ra
 Database Configuration
     php artisan migrate
+Create Migration Table
+    php artisan make:migration create_products_table --create=products
+    php artisan migrate
