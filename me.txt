@@ -1,4 +1,5 @@
                                 Installation & Project Setup
+https://laravel.com/docs/7.x/authentication
 
 Initial Project Setup
     Tạm thời tắt phần mềm diệt virut và cài đặt project laravel
@@ -15,3 +16,11 @@ Initial Project Setup
     - Remove public trên URL
     C:\Windows\System32\drivers\etc -----------> hosts
         127.0.0.1       vuejs_resful.xyz
+Intall authentication system
+    https://laravel.com/docs/7.x/authentication
+    composer require laravel/ui
+    php artisan ui vue --auth
+    php artisan serve
+    npm install
+    npm run watch
+        -> Ở public folder các file css và js được tạo ra
