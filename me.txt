@@ -24,3 +24,5 @@ Intall authentication system
     npm install
     npm run watch
         -> Ở public folder các file css và js được tạo ra
+Database Configuration
+    php artisan migrate
