@@ -14,22 +14,24 @@
 
         <table class="table table-bordered">
             <tr>
-                <th>Product Name</th>
-                <th>Product Code</th>
-                <th>Details</th>
-                <th>Product Logo</th>
-                <th>Action</th>
+                <th width="150px">Product Name</th>
+                <th width="150px">Product Code</th>
+                <th width="200px">Details</th>
+                <th width="100px">Product Logo</th>
+                <th width="280px">Action</th>
             </tr>
             <tr>
-                <td>Product Name</td>
-                <td>Product Code</td>
-                <td>Details</td>
-                <td></td>
-                <td>
-                    <a class="btn btn-info" href="">Show</a>
-                    <a class="btn btn-primary" href="">Edit</a>
-                    <a class="btn btn-danger" href="">Delete</a>
-                </td>
+                @foreach ($product as $pro)
+                    <td>{{ $pro->product_name }}</td>
+                    <td>{{ $pro->product_code }}</td>
+                    <td>{{ $pro->details }}</td>
+                    <td></td>
+                    <td>
+                        <a class="btn btn-info" href="">Show</a>
+                        <a class="btn btn-primary" href="">Edit</a>
+                        <a class="btn btn-danger" href="">Delete</a>
+                    </td>
+                @endforeach
             </tr>
         </table>
     </div>
