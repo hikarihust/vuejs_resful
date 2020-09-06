@@ -37,3 +37,4 @@ Setup Page Layouts
     bootstrap cdn
 Read All Data From Database 1
 Read All Data From Database 2
+Insert Data in Database 1
