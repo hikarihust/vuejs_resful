@@ -11,6 +11,12 @@
                 <a class="btn btn-success" href="{{ route('create.product') }}">Create New Product</a>
             </div>
         </div>
+    </div>
+        @if($message = Session::get('success'))
+            <div class="alert alert-success">
+                <p>{{ $message }}</p>
+            </div>
+        @endif
 
         <table class="table table-bordered">
             <tr>
@@ -20,19 +26,18 @@
                 <th width="100px">Product Logo</th>
                 <th width="280px">Action</th>
             </tr>
-            <tr>
-                @foreach ($product as $pro)
+            @foreach ($product as $pro)
+                <tr>
                     <td>{{ $pro->product_name }}</td>
                     <td>{{ $pro->product_code }}</td>
                     <td>{{ $pro->details }}</td>
-                    <td></td>
+                    <td><img src="{{ URL::to($pro->logo) }}" height="70px;" width="80px;" alt=""></td>
                     <td>
                         <a class="btn btn-info" href="">Show</a>
                         <a class="btn btn-primary" href="">Edit</a>
                         <a class="btn btn-danger" href="">Delete</a>
                     </td>
-                @endforeach
-            </tr>
+                </tr>
+            @endforeach
         </table>
-    </div>
 @endsection
