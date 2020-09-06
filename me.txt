@@ -29,3 +29,7 @@ Database Configuration
 Create Migration Table
     php artisan make:migration create_products_table --create=products
     php artisan migrate
+Add Controller Model ,Route
+    php artisan make:controller ProductController
+    php artisan make:controller Test --resource
+    php artisan make:model Product
