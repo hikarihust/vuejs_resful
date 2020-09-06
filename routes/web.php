@@ -17,6 +17,8 @@ Route::get('/', function () {
     return view('main');
 });
 
-Auth::routes();
+Route::get('/products', 'ProductController@index')->name('product.index');
 
-Route::get('/home', 'HomeController@index')->name('home');
+// Auth::routes();
+
+// Route::get('/home', 'HomeController@index')->name('home');

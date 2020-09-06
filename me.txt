@@ -35,3 +35,4 @@ Add Controller Model ,Route
     php artisan make:model Product
 Setup Page Layouts
     bootstrap cdn
+Read All Data From Database 1
