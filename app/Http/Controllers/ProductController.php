@@ -78,4 +78,9 @@ class ProductController extends Controller
         return redirect()->route('product.index')
                         ->with('success', 'Product Deleted Successfully');
     }
+
+    public function show($id) {
+        $data = DB::table('products')->where('id', $id)->first();
+        return view('product.show', compact(('data')));
+    }
 }
