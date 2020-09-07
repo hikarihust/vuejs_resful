@@ -38,4 +38,9 @@ class ProductController extends Controller
                              ->with('success', 'Product Created Successfully');
         }
     }
+
+    public function edit($id) {
+        $product = DB::table('products')->where('id', $id)->first();
+        return view('product.edit', compact('product'));
+    }
 }
