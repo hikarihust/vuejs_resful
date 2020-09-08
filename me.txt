@@ -44,3 +44,5 @@ Edit Data In to Database 2
 Delete Data from Database
 Create Product Details Page
 Paginat in Details Page
+Add Limit in Description
+    composer require laravel/helpers
