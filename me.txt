@@ -43,3 +43,4 @@ Edit Data In to Database 1
 Edit Data In to Database 2
 Delete Data from Database
 Create Product Details Page
+Paginat in Details Page

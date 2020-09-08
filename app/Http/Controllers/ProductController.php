@@ -9,7 +9,7 @@ use App\Model\Product;
 class ProductController extends Controller
 {
     public function index() {
-        $product = DB::table('products')->get();
+        $product = DB::table('products')->latest()->paginate(3);
         return view('product.index', compact('product'));
     }
 
