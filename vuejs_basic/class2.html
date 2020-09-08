@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue js Methods</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <h1>{{ myName() }}</h1>
+        <h1>{{ myAge(24) }}</h1>
+    </div>
+
+    <script>
+        let app = new Vue({
+            el: '#app',
+            data: {
+                message: 'Easy Project'
+            },
+            methods: {
+                myName() {
+                    return 'easy learning methods'
+                },
+                myAge(age) {
+                    return `${this.message} My age is ${age}`
+                }
+            }
+        })
+    </script>
+</body>
+</html>

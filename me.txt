@@ -52,3 +52,4 @@ Add Limit in Description
                                     VueJs Basic Fundamentals
 
 Setup Support and Elements
+VueJs Methods
