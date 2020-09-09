@@ -58,3 +58,5 @@ VueJs Events
 VueJs Event Objects
 VueJs Keyboard Events
 VueJs Two Way Data Binding
+VueJs Modifiers
+    event click.alt -> Alt + Click

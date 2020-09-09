@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue js Modifier</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <h1>{{name}}</h1>
+        <button @click.alt="message">Click Me</button>
+        <button @click.shift="message">Click Me</button>
+        <a href="https://vuejs.org/v2/guide/?" @click.prevent>VueJs</a>
+    </div>
+
+    <script>
+        let app = new Vue({
+            el: '#app',
+            data: {
+                name: 'Easy Project'
+            },
+            methods: {
+                message() {
+                    console.log("easy learning");
+                }
+            }
+        })
+    </script>
+</body>
+</html>
