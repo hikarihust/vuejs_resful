@@ -57,3 +57,4 @@ VueJs One way Data Binding
 VueJs Events
 VueJs Event Objects
 VueJs Keyboard Events
+VueJs Two Way Data Binding
