@@ -53,3 +53,4 @@ Add Limit in Description
 
 Setup Support and Elements
 VueJs Methods
+VueJs One way Data Binding

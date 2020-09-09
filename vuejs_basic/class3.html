@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue js Data Binding</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <style>
+        .one {
+            color: orange;
+        }
+        .two {
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <a v-bind:href="address">Vuejs</a>
+        <h1 :class="classes">Easy Learning</h1>
+        <input type="text" v-bind:value="name">
+    </div>
+
+    <script>
+        let app = new Vue({
+            el: '#app',
+            data: {
+                address: 'https://jp.vuejs.org/',
+                classes: ['one', 'two'],
+                name: 'quang vu'
+            }
+        })
+    </script>
+</body>
+</html>
