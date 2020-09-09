@@ -56,3 +56,4 @@ VueJs Methods
 VueJs One way Data Binding
 VueJs Events
 VueJs Event Objects
+VueJs Keyboard Events
