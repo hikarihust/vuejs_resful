@@ -62,3 +62,11 @@ VueJs Modifiers
     event click.alt -> Alt + Click
 VueJs V if , v elseif etc
 VueJs V For
+VueJs Vue CLI
+    vue cli
+        npm install -g @vue/cli
+        check after install: vue --version
+    Creating a Project
+        vue create vue
+    cd vue
+    npm run serve
