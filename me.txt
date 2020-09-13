@@ -71,3 +71,4 @@ VueJs Vue CLI
     cd vue
     npm run serve
 VueJs Components Vuefiles
+VueJs Data Function
