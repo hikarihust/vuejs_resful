@@ -2,28 +2,34 @@
   <div id="app">
       <h2>{{ title }}</h2>
       <Navbar></Navbar>
-      <nav>
-        <ul>
-            <li><a href="">Home</a></li>
-            <li><a href="">Post</a></li>
-            <li><a href="">About</a></li>
-        </ul>
-      </nav>
+      <AllFriends :friends="friends"></AllFriends>
+      <OnlineFriends :friends="friends"></OnlineFriends>
   </div>
 </template>
 
 <script>
 
 import Navbar from './components/Navbar'
+import AllFriends from './components/AllFriends'
+import OnlineFriends from './components/OnlineFriends'
 export default {
   name: 'App',
   data() {
       return {
-          title: 'Wow Our vue website are running'
+          title: 'Wow Our vue website are running',
+          friends: [
+              { name: 'A', online: true },
+              { name: 'B', online: false },
+              { name: 'C', online: true },
+              { name: 'D', online: true },
+              { name: 'E', online: false },
+          ]
       }
   },
   components: {
-      Navbar
+      Navbar,
+      AllFriends,
+      OnlineFriends
   }
 }
 </script>
