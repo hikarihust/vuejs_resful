@@ -4,6 +4,7 @@
       <Navbar></Navbar>
       <AllFriends :friends="friends" @delete="deleteFriend"></AllFriends>
       <OnlineFriends :friends="friends"></OnlineFriends>
+      <Hook></Hook>
   </div>
 </template>
 
@@ -12,6 +13,7 @@
 import Navbar from './components/Navbar'
 import AllFriends from './components/AllFriends'
 import OnlineFriends from './components/OnlineFriends'
+import Hook from './components/Hook'
 export default {
   name: 'App',
   data() {
@@ -29,7 +31,8 @@ export default {
   components: {
       Navbar,
       AllFriends,
-      OnlineFriends
+      OnlineFriends,
+      Hook
   },
   methods: {
       deleteFriend(payload) {
