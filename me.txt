@@ -75,3 +75,4 @@ VueJs Data Function
 VueJs Nested Components
 VueJs CSS Skoped
 VueJs Props
+VueJs Custome Event
