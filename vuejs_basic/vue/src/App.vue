@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-      <h2>{{ title }}</h2>
       <Navbar></Navbar>
       <AllFriends :friends="friends" @delete="deleteFriend"></AllFriends>
       <OnlineFriends :friends="friends"></OnlineFriends>
@@ -18,7 +17,6 @@ export default {
   name: 'App',
   data() {
       return {
-          title: 'Wow Our vue website are running',
           friends: [
               { name: 'A', online: true },
               { name: 'B', online: false },
