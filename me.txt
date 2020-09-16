@@ -83,3 +83,7 @@ VueJs Axios Request
         https://jsonplaceholder.typicode.com/
 VueJs Filter
 VueJs Custome Search
+VueJs Router and Project Create
+    npm install -g @vue/cli
+    vue create mvue
+    vue add router
