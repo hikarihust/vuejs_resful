@@ -3,7 +3,8 @@
         <h1>{{ title }}</h1>
         <button @click="ChangeTitle">Click Me</button>
         <h1>Posts</h1>
-        <div v-for="post in posts" :key="post.id">
+        <input type="text" v-model="searchTerm" placeholder="Search">
+        <div v-for="post in filtersearch" :key="post.id">
             <h2>{{ post.title }}</h2>
             <p>{{ post.body | snippet }}</p>
         </div>
@@ -17,7 +18,15 @@ export default {
   data() {
       return {
         title: 'VueJs Axios Request',
-        posts: []
+        posts: [],
+        searchTerm: ''
+      }
+  },
+  computed: {
+      filtersearch() {
+          return this.posts.filter(post => {
+              return post.title.match(this.searchTerm);
+          });
       }
   },
   methods: {

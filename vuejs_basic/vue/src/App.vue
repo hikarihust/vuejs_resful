@@ -34,7 +34,6 @@ export default {
   },
   methods: {
       deleteFriend(payload) {
-          console.log(payload);
           this.friends = this.friends.filter(friend => {
               return friend.name !== payload.name;
           })
