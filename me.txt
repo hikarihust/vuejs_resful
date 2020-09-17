@@ -90,3 +90,4 @@ VueJs Router and Project Create
 VueJs Setting Routes
 VueJs Routere Links
 VueJs Router Parameter
+VueJs Router Object
