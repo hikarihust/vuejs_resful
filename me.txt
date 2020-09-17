@@ -94,3 +94,16 @@ VueJs Router Object
 VueJs More Router Links
 VueJs Dynamic Redirect Mode
 VueJs Active Link
+
+=======================================================================================================
+
+                                    Restful API Basic Fundamentals
+RestAPI API php,Web php,Channels php,Console php
+    composer create-project --prefer-dist laravel/laravel:^7.0 rapi
+    php artisan serve
+    http://127.0.0.1:8000
+    DB_DATABASE=rapi
+    AppServiceProvider.php
+        use Illuminate\Support\Facades\Schema;
+        Schema::defaultStringLength(191);
+    php artisan migrate
