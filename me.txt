@@ -87,3 +87,4 @@ VueJs Router and Project Create
     npm install -g @vue/cli
     vue create mvue
     vue add router
+VueJs Setting Routes
