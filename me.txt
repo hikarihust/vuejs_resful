@@ -107,3 +107,10 @@ RestAPI API php,Web php,Channels php,Console php
         use Illuminate\Support\Facades\Schema;
         Schema::defaultStringLength(191);
     php artisan migrate
+RestAPI MCR,First Route and Method
+    php artisan make:migration create_sclasses_table --create=sclasses
+    php artisan migrate
+    php artisan make:model Model/Sclass
+    php artisan make:controller Api/SclassController --resource
+    http://127.0.0.1:8000/api/class
+    
