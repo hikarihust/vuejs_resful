@@ -16,6 +16,12 @@
                 </li>
             </ul>
         </div>
+
+        <button @click="contact">Contact</button>
+        <button @click="about">About</button>
+        <div>
+
+        </div>
   </div>
 </template>
 
@@ -26,6 +32,14 @@ export default {
   data() {
       return {
           userIds: ['1', '2', '3', '4', '5', '6', '7', '8']
+      }
+  },
+  methods: {
+      contact() {
+          this.$router.push({ name: 'Contact' });
+      },
+      about() {
+          this.$router.push({ name: 'About' });
       }
   }
 }
