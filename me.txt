@@ -141,4 +141,4 @@ RestAPI Section CRUD 1
     php artisan migrate
     php artisan make:model Model/Section 
     php artisan make:controller Api/SectionController --resource
-    
+RestAPI Section CRUD 2
