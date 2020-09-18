@@ -113,4 +113,11 @@ RestAPI MCR,First Route and Method
     php artisan make:model Model/Sclass
     php artisan make:controller Api/SclassController --resource
     http://127.0.0.1:8000/api/class
+RestAPI Class CRUD 1
+    php artisan r:l
+    Postman: 
+        Accept: application/json 
+        Content-Type: application/json
+    GET api/class class.index App\Http\Controllers\Api\SclassController@index
+    POST api/class class.store App\Http\Controllers\Api\SclassController@store
     
