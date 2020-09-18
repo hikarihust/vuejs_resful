@@ -120,4 +120,8 @@ RestAPI Class CRUD 1
         Content-Type: application/json
     GET api/class class.index App\Http\Controllers\Api\SclassController@index
     POST api/class class.store App\Http\Controllers\Api\SclassController@store
-    
+RestAPI Class CRUD 2
+    DELETE api/class/{class} class.destroy
+    GET api/class/{class} class.show
+    PUT|PATCH api/class/{class} class.update
+    vuejs_resful.xyz
