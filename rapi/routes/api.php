@@ -20,3 +20,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::apiResource('/class', 'Api\SclassController');
 Route::apiResource('/subject', 'Api\SubjectController');
+Route::apiResource('/section', 'Api\SectionController');
