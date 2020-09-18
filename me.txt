@@ -125,3 +125,12 @@ RestAPI Class CRUD 2
     GET api/class/{class} class.show
     PUT|PATCH api/class/{class} class.update
     vuejs_resful.xyz
+RestAPI Subject CRUD 1
+    php artisan make:model Model/Subject
+    php artisan make:controller Api/SubjectController --resource
+    php artisan make:migration create_subjects_table --create=subjects 
+    php artisan migrate
+    php artisan r:l
+    POST api/subject Api\SubjectController@store
+     GET|HEAD api/subject SubjectController@index
+    

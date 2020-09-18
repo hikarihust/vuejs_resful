@@ -3,10 +3,11 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Model\Subject;
 use Illuminate\Http\Request;
-use DB;
+use Illuminate\Support\Facades\DB;
 
-class SclassController extends Controller
+class SubjectController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +16,8 @@ class SclassController extends Controller
      */
     public function index()
     {
-        $sclass = DB::table('sclasses')->get();
-        return response()->json($sclass);
+        $subject = Subject::all();
+        return response()->json($subject);
     }
 
     /**
@@ -28,13 +29,13 @@ class SclassController extends Controller
     public function store(Request $request)
     {
         $validateData = $request->validate([
-            'class_name' => 'required|unique:sclasses|max:25'
+            'class_id' => 'required',
+            'subject_name' => 'required|unique:subjects|max:25',
+            'subject_code' => 'required|unique:subjects|max:25'
         ]);
-        $data = array();
-        $data['class_name'] = $validateData['class_name'];
-        DB::table('sclasses')->insert($data);
+        Subject::create($request->all());
 
-        return response('Inserted Successfully');
+        return response('Subject Inserted Successfully');
     }
 
     /**
@@ -45,8 +46,7 @@ class SclassController extends Controller
      */
     public function show($id)
     {
-        $show = DB::table('sclasses')->where('id', $id)->first();
-        return response()->json($show);
+        //
     }
 
     /**
@@ -58,14 +58,7 @@ class SclassController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $validateData = $request->validate([
-            'class_name' => 'required|unique:sclasses|max:25'
-        ]);
-        $data = array();
-        $data['class_name'] = $validateData['class_name'];
-        DB::table('sclasses')->where('id', $id)->update($data);
-
-        return response('Updated Successfully');
+        //
     }
 
     /**
@@ -76,7 +69,6 @@ class SclassController extends Controller
      */
     public function destroy($id)
     {
-        DB::table('sclasses')->where('id', $id)->delete();
-        return response('Deleted');
+        //
     }
 }
