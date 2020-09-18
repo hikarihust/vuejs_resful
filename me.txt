@@ -142,3 +142,9 @@ RestAPI Section CRUD 1
     php artisan make:model Model/Section 
     php artisan make:controller Api/SectionController --resource
 RestAPI Section CRUD 2
+RestAPI Student CRUD 1
+    php artisan make:migration create_students_table --create=students
+    php artisan migrate
+    php artisan make:model Model/Student
+    php artisan make:controller Api/StudentController --resource
+    
