@@ -46,7 +46,8 @@ class SubjectController extends Controller
      */
     public function show($id)
     {
-        //
+        $sub = Subject::findorfail($id);
+        return response()->json($sub);
     }
 
     /**
@@ -58,7 +59,9 @@ class SubjectController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $subject = Subject::findorfail($id);
+        $subject->update($request->all());
+        return response('Updated');
     }
 
     /**
@@ -69,6 +72,7 @@ class SubjectController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Subject::where('id', $id)->delete();
+        return response('Deleted');
     }
 }

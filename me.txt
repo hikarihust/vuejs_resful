@@ -133,4 +133,7 @@ RestAPI Subject CRUD 1
     php artisan r:l
     POST api/subject Api\SubjectController@store
      GET|HEAD api/subject SubjectController@index
+RestAPI Subject CRUD 2
+    GET|HEAD api/subject/{subject} SubjectController@show 
+    DELETE api/subject/{subject} SubjectController@destroy
     
