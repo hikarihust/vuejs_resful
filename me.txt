@@ -147,4 +147,5 @@ RestAPI Student CRUD 1
     php artisan migrate
     php artisan make:model Model/Student
     php artisan make:controller Api/StudentController --resource
+RestAPI Student CRUD 2
     
