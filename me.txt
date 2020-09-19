@@ -227,3 +227,12 @@ Project Admin Template Setting
         import Vue from 'vue'
         import VueRouter from 'vue-router'
         Vue.use(VueRouter)
+Project Routes,Component, Mode
+    npm run dev 
+    npm run watch 
+    http://vuejs_resful.xyz/#/register
+    mode: 'history'
+    Route::get('/{vue_capture?}',function () {
+            return view('welcome');
+        })->where('vue_capture', '[\/\w\.-]*');
+    
