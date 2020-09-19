@@ -213,3 +213,17 @@ Project NPM,Vue Router Install
         resources: 
             home.blade.php
     
+=======================================================================================================
+
+                                Project Admin Template Setting
+        
+Project Admin Template Setting
+    https://router.vuejs.org/guide/
+    RuangAdmin
+        git clone https://github.com/indrijunanda/RuangAdmin.git
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/app.css')}}">
+    <script src="{{ asset('js/app.js')}}"></script>
+    app.js
+        import Vue from 'vue'
+        import VueRouter from 'vue-router'
+        Vue.use(VueRouter)
