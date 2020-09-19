@@ -148,4 +148,26 @@ RestAPI Student CRUD 1
     php artisan make:model Model/Student
     php artisan make:controller Api/StudentController --resource
 RestAPI Student CRUD 2
+RestAPi JWT Token Login Method
+    https://jwt-auth.readthedocs.io/en/docs/ -> laravel-installation
+    https://www.positronx.io/laravel-jwt-authentication-tutorial-user-login-signup-api/
+    composer require tymon/jwt-auth
+    'providers' => [
+
+        ...
+
+        Tymon\JWTAuth\Providers\LaravelServiceProvider::class,
+    ]
+    Publish the config: 
+        php artisan vendor:publish --provider="Tymon\JWTAuth\Providers\LaravelServiceProvider"
+    Generate secret key
+        php artisan jwt:secret
+    Update User model
+    Configure Auth guard
+    Add some basic authentication routes
+    Create the AuthController
+        php artisan make:controller AuthController
+    php artisan cache:clear
+    php artisan config:cache
+    http://vuejs_resful.xyz/api/auth/login
     
