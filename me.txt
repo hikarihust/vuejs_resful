@@ -181,3 +181,20 @@ RestAPI Signup
     email 
     password
     password_confirmation
+
+=======================================================================================================
+
+                                    Create Inventory Management System  Project
+
+Laravel 7 Project Install
+    Project name: laravel-vue-master 
+    phpinfo();
+        PHP Version 7.3.12
+    composer create-project --prefer-dist laravel/laravel:^7.0 laravel-vue-master
+    composer require laravel/ui:^2.4
+    php artisan ui vue --auth
+    Database: inventory 
+    use Illuminate\Support\Facades\Schema;
+    Schema::defaultStringLength(191);
+    php artisan migrate
+    
