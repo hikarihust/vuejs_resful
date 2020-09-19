@@ -197,4 +197,19 @@ Laravel 7 Project Install
     use Illuminate\Support\Facades\Schema;
     Schema::defaultStringLength(191);
     php artisan migrate
+Project NPM,Vue Router Install
+    check nodejs: npm -v 
+    npm install 
+    laravel vue router
+        https://router.vuejs.org/installation.html#npm
+        npm install vue-router
+            -> node_modules/vue-router
+    npm run dev
+        -> Ở public folder các file css và js được tạo ra
+    Remove 
+        web.php:
+            Auth::routes();
+            Route::get('/home', 'HomeController@index')->name('home');
+        resources: 
+            home.blade.php
     
