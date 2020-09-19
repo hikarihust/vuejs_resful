@@ -235,4 +235,4 @@ Project Routes,Component, Mode
     Route::get('/{vue_capture?}',function () {
             return view('welcome');
         })->where('vue_capture', '[\/\w\.-]*');
-    
+Project Login,Register,Forget Password Page Setup
