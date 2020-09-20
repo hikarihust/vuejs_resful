@@ -47,7 +47,6 @@
 
 <script>
 export default {
-    name: 'Register',
     components: {
     },
     data() {

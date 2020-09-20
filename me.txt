@@ -288,4 +288,7 @@ Project JWT Middleware
         -> Http/Middleware/JWT.php 
     Kernel.php 
         'JWT' => \App\Http\Middleware\JWT::class,
-    
+Project Login with Token
+    npm run watch
+    res.data
+    error.response.data
