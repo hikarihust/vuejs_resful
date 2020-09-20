@@ -265,4 +265,14 @@ Project JWT Implement
     php artisan cache:clear
     php artisan config:cache
     http://vuejs_resful.xyz/api/auth/login
+Project JWT Check and Signup 1
+    password as (123456): $2y$10$BcDmk50XctV/Y5IfOaOto.ZsE7GtUnx0a3CQdmTCcC95vvt/hoWIi
+    http://vuejs_resful.xyz/api/auth/login
+        Accept: application/json
+        Content-Type: application/x-www-form-urlencoded
+        email: admin@gmail.com
+        password: 123456
+    http://vuejs_resful.xyz/api/auth/me
+        Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC92dWVqc19yZXNmdWwueHl6XC9hcGlcL2F1dGhcL2xvZ2luIiwiaWF0IjoxNjAwNDgzNzk1LCJleHAiOjE2MDA0ODczOTUsIm5iZiI6MTYwMDQ4Mzc5NSwianRpIjoic0dsT3o5dDhtV1hhRGt5ZyIsInN1YiI6MSwicHJ2IjoiODdlMGFmMWVmOWZkMTU4MTJmZGVjOTcxNTNhMTRlMGIwNDc1NDZhYSJ9.tloDZHwwlLzZRpoPSTR5s-EPP8ilN5hYOF1iFFNtMtI
+    http://vuejs_resful.xyz/api/auth/logout 
     
