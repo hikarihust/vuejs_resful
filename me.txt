@@ -296,4 +296,8 @@ Project Helper Class
 Project Helper Token
     return payload.iss = "http://vuejs_resful.xyz/api/auth/login" || "http://vuejs_resful.xyz/api/auth/signup" ? true : false
         -> token is come from 
+Project Helper User
+    Bind classes to Global Scope in ES6
+    import User from './Helpers/User';
+    window.User = User;
     
