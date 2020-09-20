@@ -275,4 +275,12 @@ Project JWT Check and Signup 1
     http://vuejs_resful.xyz/api/auth/me
         Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC92dWVqc19yZXNmdWwueHl6XC9hcGlcL2F1dGhcL2xvZ2luIiwiaWF0IjoxNjAwNDgzNzk1LCJleHAiOjE2MDA0ODczOTUsIm5iZiI6MTYwMDQ4Mzc5NSwianRpIjoic0dsT3o5dDhtV1hhRGt5ZyIsInN1YiI6MSwicHJ2IjoiODdlMGFmMWVmOWZkMTU4MTJmZGVjOTcxNTNhMTRlMGIwNDc1NDZhYSJ9.tloDZHwwlLzZRpoPSTR5s-EPP8ilN5hYOF1iFFNtMtI
     http://vuejs_resful.xyz/api/auth/logout 
+Project JWT Check and Signup 2 
+    http://vuejs_resful.xyz/api/auth/signup
+    email
+    name
+    password
+    password_confirmation
+    http://vuejs_resful.xyz/api/auth/me
+        check result 
     
