@@ -236,3 +236,33 @@ Project Routes,Component, Mode
             return view('welcome');
         })->where('vue_capture', '[\/\w\.-]*');
 Project Login,Register,Forget Password Page Setup
+
+=======================================================================================================
+
+                                Implement JWT Token for Login Authentication
+
+Project JWT Implement
+    composer update
+    https://jwt-auth.readthedocs.io/en/docs/ -> laravel-installation
+    https://www.positronx.io/laravel-jwt-authentication-tutorial-user-login-signup-api/
+    composer require tymon/jwt-auth
+    'providers' => [
+
+        ...
+
+        Tymon\JWTAuth\Providers\LaravelServiceProvider::class,
+    ]
+    Publish the config: 
+        php artisan vendor:publish --provider="Tymon\JWTAuth\Providers\LaravelServiceProvider"
+            -> config/jwt.php
+    Generate secret key
+        php artisan jwt:secret
+    Update User model
+    Configure Auth guard
+    Add some basic authentication routes
+    Create the AuthController
+        php artisan make:controller AuthController
+    php artisan cache:clear
+    php artisan config:cache
+    http://vuejs_resful.xyz/api/auth/login
+    
