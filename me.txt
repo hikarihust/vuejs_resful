@@ -283,4 +283,9 @@ Project JWT Check and Signup 2
     password_confirmation
     http://vuejs_resful.xyz/api/auth/me
         check result 
+Project JWT Middleware
+    php artisan make:middleware JWT 
+        -> Http/Middleware/JWT.php 
+    Kernel.php 
+        'JWT' => \App\Http\Middleware\JWT::class,
     
