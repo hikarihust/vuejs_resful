@@ -293,4 +293,7 @@ Project Login with Token
     res.data
     error.response.data
 Project Helper Class
+Project Helper Token
+    return payload.iss = "http://vuejs_resful.xyz/api/auth/login" || "http://vuejs_resful.xyz/api/auth/signup" ? true : false
+        -> token is come from 
     
