@@ -63,7 +63,7 @@ export default {
         login(){
                 axios.post('/api/auth/login', this.form)
                 .then(res => {
-                    console.log(res.data);
+                    User.responseAfterLogin(res)
                 })
                 .catch(error => {console.log(error.response.data)})
             }

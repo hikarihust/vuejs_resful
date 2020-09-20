@@ -300,4 +300,6 @@ Project Helper User
     Bind classes to Global Scope in ES6
     import User from './Helpers/User';
     window.User = User;
+Project STore Token
+    id: payload.sub 
     
