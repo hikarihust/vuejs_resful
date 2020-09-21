@@ -2674,6 +2674,17 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   methods: {
+    onFileSelected: function onFileSelected(event) {
+      var file = event.target.files[0];
+
+      if (file.size > 1048576) {
+        Notification.image_size_validation();
+      } else if (!file.name.match(/.(jpg|jpeg|png|gif)$/i)) {
+        Notification.image_ext_validation();
+      } else {
+        console.log(event);
+      }
+    },
     employeeInsert: function employeeInsert() {}
   }
 });
@@ -46659,7 +46670,8 @@ var render = function() {
                           _c("div", { staticClass: "col-md-6" }, [
                             _c("input", {
                               staticClass: "custom-file-input",
-                              attrs: { type: "file", id: "customFile" }
+                              attrs: { type: "file", id: "customFile" },
+                              on: { change: _vm.onFileSelected }
                             }),
                             _vm._v(" "),
                             _vm.errors.photo
@@ -62141,6 +62153,26 @@ var Notification = /*#__PURE__*/function () {
         type: 'warning',
         layout: 'topRight',
         text: 'Opps Wrong ',
+        timeout: 1000
+      }).show();
+    }
+  }, {
+    key: "image_size_validation",
+    value: function image_size_validation() {
+      new Noty({
+        type: 'error',
+        layout: 'topRight',
+        text: 'Upload Image must less then 1MB ',
+        timeout: 1000
+      }).show();
+    }
+  }, {
+    key: "image_ext_validation",
+    value: function image_ext_validation() {
+      new Noty({
+        type: 'error',
+        layout: 'topRight',
+        text: 'Upload Image Extension file Error ',
         timeout: 1000
       }).show();
     }
