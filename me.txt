@@ -357,4 +357,12 @@ Component Load 2
     php artisan migrate
     php artisan make:controller Api/EmployeeController --resource
     php artisan make:model Model/Employee 
+Component Load 3
+    Route::apiResource('/employee', 'Api\EmployeeController');
+    php artisan r:l
+    GET:        api/employee                  Api\EmployeeController@index
+    POST:       api/employee                  Api\EmployeeController@store
+    GET:        api/employee/{employee}       Api\EmployeeController@show
+    PUT|PATCH:  api/employee/{employee}       Api\EmployeeController@destroy
+    DELETE:     api/employee/{employee}       Api\EmployeeController@destroy
     
