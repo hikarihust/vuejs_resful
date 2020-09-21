@@ -3,8 +3,11 @@ class Token{
     isValid(token){
         const payload = this.payload(token)
         if (payload) {
-            console.log(payload);
-            return payload.iss = "http://vuejs_resful.xyz/api/auth/login" || "http://vuejs_resful.xyz/api/auth/register" ? true : false
+            if(payload.iss == "http://vuejs_resful.xyz/api/auth/login") {
+                return true;
+            } else if(payload.iss == "http://vuejs_resful.xyz/api/auth/signup") {
+                return true;
+            }
         }
         return false
     }

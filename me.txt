@@ -331,3 +331,4 @@ Project Validation , Errors 1
         });
         window.Toast = Toast;
 Project Validation , Errors 2
+Project Register,Logout 1
