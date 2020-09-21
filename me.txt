@@ -338,3 +338,16 @@ Project Mastering Sidebar Topbar
         Toggles the element’s display CSS property based on the truthy-ness of the expression value.
         This directive triggers transitions when its condition changes.
     
+=======================================================================================================
+
+                                Create CRUD for Employee
+Install Noty in Project
+    noty
+    https://ned.im/noty/#/
+    npm install noty
+    Add to resources/sass/app.scss
+        @import "~noty/src/noty.scss";
+        @import "~noty/src/themes/mint.scss";
+    Add to resources/js/bootstrap.js
+    npm run dev
+    
