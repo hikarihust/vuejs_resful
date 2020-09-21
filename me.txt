@@ -352,3 +352,9 @@ Install Noty in Project
     npm run dev
 Employee Module
 Component Load 1
+Component Load 2
+    php artisan make:migration create_employees_table --create=employees
+    php artisan migrate
+    php artisan make:controller Api/EmployeeController --resource
+    php artisan make:model Model/Employee 
+    

@@ -2672,6 +2672,9 @@ __webpack_require__.r(__webpack_exports__);
       },
       errors: {}
     };
+  },
+  methods: {
+    employeeInsert: function employeeInsert() {}
   }
 });
 
@@ -46298,10 +46301,11 @@ var render = function() {
                     "form",
                     {
                       staticClass: "user",
+                      attrs: { enctype: "multipart/form-data" },
                       on: {
                         submit: function($event) {
                           $event.preventDefault()
-                          return _vm.signup($event)
+                          return _vm.employeeInsert($event)
                         }
                       }
                     },

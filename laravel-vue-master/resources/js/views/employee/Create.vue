@@ -13,7 +13,7 @@
                                     <div class="text-center">
                                         <h1 class="h4 text-gray-900 mb-4">Add Employee</h1>
                                     </div>
-                                    <form class="user" @submit.prevent="signup">
+                                    <form class="user" @submit.prevent="employeeInsert" enctype="multipart/form-data">
                                         <div class="form-group">
                                             <div class="form-row">
                                                 <div class="col-md-6">
@@ -117,6 +117,12 @@ export default {
                 joining_date: null
             },
             errors:{}
+        }
+    },
+
+    methods:{
+        employeeInsert() {
+
         }
     }
 }
