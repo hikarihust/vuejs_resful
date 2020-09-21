@@ -351,3 +351,4 @@ Install Noty in Project
     Add to resources/js/bootstrap.js
     npm run dev
 Employee Module
+Component Load 1
