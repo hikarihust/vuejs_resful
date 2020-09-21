@@ -333,3 +333,8 @@ Project Validation , Errors 1
 Project Validation , Errors 2
 Project Register,Logout 1
 Project Register,Logout 2
+Project Mastering Sidebar Topbar
+    v-show
+        Toggles the element’s display CSS property based on the truthy-ness of the expression value.
+        This directive triggers transitions when its condition changes.
+    

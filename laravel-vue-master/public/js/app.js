@@ -58524,7 +58524,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _views_auth_Login_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../views/auth/Login.vue */ "./resources/js/views/auth/Login.vue");
 /* harmony import */ var _views_auth_Register_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../views/auth/Register.vue */ "./resources/js/views/auth/Register.vue");
 /* harmony import */ var _views_auth_Forget_vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../views/auth/Forget.vue */ "./resources/js/views/auth/Forget.vue");
-/* harmony import */ var _views_auth_Logout_vue__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../views/auth/Logout.vue */ "./resources/js/views/auth/Logout.vue");
+/* harmony import */ var _views_auth_Logout_vue__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../views/auth/Logout.vue */ "./resources/js/views/auth/Logout.vue");
 /* harmony import */ var _views_Home_vue__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../views/Home.vue */ "./resources/js/views/Home.vue");
 
 
@@ -58549,7 +58549,7 @@ var routes = [{
   name: 'forget'
 }, {
   path: '/logout',
-  component: _views_auth_Logout_vue__WEBPACK_IMPORTED_MODULE_7__["default"],
+  component: _views_auth_Logout_vue__WEBPACK_IMPORTED_MODULE_5__["default"],
   name: 'logout'
 }, {
   path: '/home',
