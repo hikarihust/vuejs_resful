@@ -9,6 +9,9 @@ import Logout from '../views/auth/Logout.vue';
 // End Authentication
 import Home from '../views/Home.vue';
 
+// Empoyee Component
+import Storeemployee from '../views/employee/Create.vue';
+
 Vue.use(VueRouter)
 
 const routes = [
@@ -17,6 +20,9 @@ const routes = [
     { path: '/forget', component: Forget, name:'forget'},
     { path: '/logout', component: Logout, name:'logout'},
     { path: '/home', component: Home, name:'home'},
+
+    // Employee Routes
+    { path: '/store-employee', component: Storeemployee, name:'store-employee'},
 ]
 
 const router = new VueRouter({

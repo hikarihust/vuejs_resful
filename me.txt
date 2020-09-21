@@ -350,4 +350,4 @@ Install Noty in Project
         @import "~noty/src/themes/mint.scss";
     Add to resources/js/bootstrap.js
     npm run dev
-    
+Employee Module
