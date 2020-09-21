@@ -311,4 +311,23 @@ Home Component After Login 1
     php artisan cache:clear
     php artisan config:cache
 Home Component After Login 2
+Project Validation , Errors 1
+    sweetalert 
+    https://sweetalert2.github.io/
+    npm install sweetalert2
+    Usage
+        import Swal from 'sweetalert2'
+        window.Swal = Swal;
+        const Toast = Swal.mixin({
+            toast: true,
+            position: 'top-end',
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true,
+            onOpen: (toast) => {
+                toast.addEventListener('mouseenter', Swal.stopTimer)
+                toast.addEventListener('mouseleave', Swal.resumeTimer)
+            }
+        });
+        window.Toast = Toast;
     
