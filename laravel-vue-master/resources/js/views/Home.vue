@@ -333,11 +333,9 @@
 
 <script>
 export default {
-    components: {
-    },
-    data() {
-        return {
-
+    created(){
+        if (!User.loggedIn()) {
+            this.$router.push({name: '/'})
         }
     }
 }

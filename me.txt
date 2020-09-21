@@ -310,3 +310,5 @@ Project STore Token
 Home Component After Login 1
     php artisan cache:clear
     php artisan config:cache
+Home Component After Login 2
+    
