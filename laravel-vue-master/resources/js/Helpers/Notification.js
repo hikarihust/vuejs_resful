@@ -36,20 +36,20 @@ class Notification{
         }).show();
     }
 
-    image_size_validation(){
-        new Noty({
-            type: 'error',
-            layout: 'topRight',
-            text: 'Upload Image must less then 1MB ',
-            timeout: 1000,
-        }).show();
-    }
-
     image_ext_validation(){
         new Noty({
             type: 'error',
             layout: 'topRight',
             text: 'Upload Image Extension file Error ',
+            timeout: 1000,
+        }).show();
+    }
+
+    image_size_validation(){
+        new Noty({
+            type: 'error',
+            layout: 'topRight',
+            text: 'Upload Image less then 1MB ',
             timeout: 1000,
         }).show();
     }

@@ -2675,17 +2675,35 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     onFileSelected: function onFileSelected(event) {
-      var file = event.target.files[0];
+      var _this = this;
 
-      if (file.size > 1048576) {
-        Notification.image_size_validation();
-      } else if (!file.name.match(/.(jpg|jpeg|png|gif)$/i)) {
+      var listFiles = event.target.files;
+      if (listFiles.length === 0) return;
+      var file = listFiles[0];
+
+      if (!/\/(jpe?g|png|gif|bmp)$/i.test(file.type)) {
         Notification.image_ext_validation();
+      } else if (file.size > 1048576) {
+        Notification.image_size_validation();
       } else {
-        console.log(event);
+        var reader = new FileReader();
+
+        reader.onload = function (event) {
+          _this.form.photo = event.target.result;
+        };
+
+        reader.readAsDataURL(file);
       }
     },
-    employeeInsert: function employeeInsert() {}
+    employeeInsert: function employeeInsert() {
+      var _this2 = this;
+
+      axios.post('/api/employee', this.form).then(function (res) {// this.$router.push({ name: 'employee'});
+        // Notification.success();
+      })["catch"](function (error) {
+        return _this2.errors = error.response.data.errors;
+      });
+    }
   }
 });
 
@@ -46694,7 +46712,7 @@ var render = function() {
                           _vm._v(" "),
                           _c("div", { staticClass: "col-md-6" }, [
                             _c("img", {
-                              staticStyle: { height: "40px", width: "40px" },
+                              staticStyle: { height: "60px", width: "60px" },
                               attrs: { src: _vm.form.photo }
                             })
                           ])
@@ -62157,22 +62175,22 @@ var Notification = /*#__PURE__*/function () {
       }).show();
     }
   }, {
-    key: "image_size_validation",
-    value: function image_size_validation() {
-      new Noty({
-        type: 'error',
-        layout: 'topRight',
-        text: 'Upload Image must less then 1MB ',
-        timeout: 1000
-      }).show();
-    }
-  }, {
     key: "image_ext_validation",
     value: function image_ext_validation() {
       new Noty({
         type: 'error',
         layout: 'topRight',
         text: 'Upload Image Extension file Error ',
+        timeout: 1000
+      }).show();
+    }
+  }, {
+    key: "image_size_validation",
+    value: function image_size_validation() {
+      new Noty({
+        type: 'error',
+        layout: 'topRight',
+        text: 'Upload Image less then 1MB ',
         timeout: 1000
       }).show();
     }

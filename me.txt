@@ -380,4 +380,7 @@ Image Intervantion 1
         'Image' => Intervention\Image\Facades\Image::class
     Publish configuration in Laravel
         php artisan vendor:publish --provider="Intervention\Image\ImageServiceProviderLaravelRecent"
-    
+Image Intervantion 2
+    FileReader
+    readAsDataURL
+    https://developer.mozilla.org/en-US/docs/Web/API/FileReader/onload
