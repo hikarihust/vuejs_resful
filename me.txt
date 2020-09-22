@@ -389,3 +389,6 @@ Employee Insert 1
 Employee Insert 2
 Read Data and Search 1
 Read Data and Search 2
+Edit,Delete,Unlinkimage 1
+    https://sweetalert2.github.io/
+    

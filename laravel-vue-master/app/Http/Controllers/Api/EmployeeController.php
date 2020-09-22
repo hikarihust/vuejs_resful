@@ -5,7 +5,8 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use App\Model\Employee;
 use Illuminate\Http\Request;
-use Image;
+use Intervention\Image\Facades\Image;
+use Illuminate\Support\Facades\DB;
 
 class EmployeeController extends Controller
 {
@@ -100,6 +101,13 @@ class EmployeeController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $employee = DB::table('employees')->where('id', $id)->first();
+        $photo = $employee->photo;
+        if ($photo) {
+            unlink($photo);
+            DB::table('employees')->where('id', $id)->delete();
+        } else {
+            DB::table('employees')->where('id', $id)->delete();
+        }
     }
 }
