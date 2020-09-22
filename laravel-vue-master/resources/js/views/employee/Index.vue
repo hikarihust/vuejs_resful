@@ -3,7 +3,9 @@
         <div class="row">
             <router-link to="/store-employee" class="btn btn-primary">Add Employee </router-link>
         </div>
-        <br><br>
+        <br>
+        <input type="text" v-model="searchTerm" class="form-control" style="width: 300px;" placeholder="Search Here">
+        <br>
         <div class="row">
             <div class="col-lg-12 mb-4">
                 <!-- Simple Tables -->
@@ -24,7 +26,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr v-for="employee in employees" :key="employee.id">
+                                <tr v-for="employee in filtersearch" :key="employee.id">
                                     <td> {{ employee.name }} </td>
                                     <td><img :src="employee.photo" id="em_photo"></td>
                                     <td>{{ employee.phone }}</td>
@@ -54,7 +56,15 @@ export default {
     },
     data() {
         return {
-            employees:[]
+            employees:[],
+            searchTerm:''
+        }
+    },
+    computed:{
+        filtersearch() {
+            return this.employees.filter(employee => {
+                return employee.name.match(this.searchTerm)
+            })
         }
     },
 

@@ -388,3 +388,4 @@ Employee Insert 1
     form.photo(data:image/png;base64,iVBORw0KG...)
 Employee Insert 2
 Read Data and Search 1
+Read Data and Search 2
