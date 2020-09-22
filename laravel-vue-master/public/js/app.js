@@ -2699,8 +2699,11 @@ __webpack_require__.r(__webpack_exports__);
       var _this2 = this;
 
       axios.post('/api/employee', this.form).then(function (res) {
-        console.log(res); // this.$router.push({ name: 'employee'});
-        // Notification.success();
+        _this2.$router.push({
+          name: 'employee'
+        });
+
+        Notification.success();
       })["catch"](function (error) {
         return _this2.errors = error.response.data.errors;
       });

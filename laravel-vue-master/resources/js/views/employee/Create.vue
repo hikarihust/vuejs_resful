@@ -140,9 +140,8 @@ export default {
         employeeInsert() {
             axios.post('/api/employee', this.form)
             .then((res) => {
-                console.log(res);
-                // this.$router.push({ name: 'employee'});
-                // Notification.success();
+                this.$router.push({ name: 'employee'});
+                Notification.success();
             })
             .catch(error =>this.errors = error.response.data.errors)
         }

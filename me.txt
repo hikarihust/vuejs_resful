@@ -386,4 +386,4 @@ Image Intervantion 2
     https://developer.mozilla.org/en-US/docs/Web/API/FileReader/onload
 Employee Insert 1
     form.photo(data:image/png;base64,iVBORw0KG...)
-    
+Employee Insert 2
