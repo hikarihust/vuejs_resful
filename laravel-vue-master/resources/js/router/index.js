@@ -12,6 +12,7 @@ import Home from '../views/Home.vue';
 // Empoyee Component
 import Storeemployee from '../views/employee/Create.vue';
 import Employee from '../views/employee/Index.vue';
+import Editemployee from '../views/employee/Edit.vue';
 
 Vue.use(VueRouter)
 
@@ -25,6 +26,7 @@ const routes = [
     // Employee Routes
     { path: '/store-employee', component: Storeemployee, name:'store-employee'},
     { path: '/employee', component: Employee, name:'employee'},
+    { path: '/edit-employee/:id', component: Editemployee, name:'edit-employee'},
 ]
 
 const router = new VueRouter({
