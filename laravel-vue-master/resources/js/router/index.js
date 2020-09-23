@@ -14,6 +14,11 @@ import Storeemployee from '../views/employee/Create.vue';
 import Employee from '../views/employee/Index.vue';
 import Editemployee from '../views/employee/Edit.vue';
 
+// Supplier Component
+import Storesupplier from '../views/supplier/Create.vue';
+import Supplier from '../views/supplier/Index.vue';
+import Editsupplier from '../views/supplier/Edit.vue';
+
 Vue.use(VueRouter)
 
 const routes = [
@@ -27,6 +32,11 @@ const routes = [
     { path: '/store-employee', component: Storeemployee, name:'store-employee'},
     { path: '/employee', component: Employee, name:'employee'},
     { path: '/edit-employee/:id', component: Editemployee, name:'edit-employee'},
+
+    // Supplier Routes
+    { path: '/store-supplier', component: Storesupplier, name:'store-supplier'},
+    { path: '/supplier', component: Supplier, name:'supplier'},
+    { path: '/edit-supplier/:id', component: Editsupplier, name:'edit-supplier'},
 ]
 
 const router = new VueRouter({

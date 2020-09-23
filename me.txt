@@ -400,4 +400,14 @@ Edit,Delete,Unlinkimage 3
     npm run watch
     open console from browser (F12) then go to network and check and uncheck the disable cache then reload your page. 
     something your browser using your old storage files.
+
+=======================================================================================================
+
+                                Create CRUD for Supplier
+
+Project Supplier CRUD 1
+    php artisan make:migration create_suppliers_table --create=suppliers
+    php artisan migrate
+    php artisan make:controller Api/SupplierController --resource
+    php artisan make:model Model/Supplier
     
