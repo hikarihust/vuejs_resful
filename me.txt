@@ -410,4 +410,5 @@ Project Supplier CRUD 1
     php artisan migrate
     php artisan make:controller Api/SupplierController --resource
     php artisan make:model Model/Supplier
+Project Supplier CRUD 2
     
