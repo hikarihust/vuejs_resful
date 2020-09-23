@@ -363,7 +363,7 @@ Component Load 3
     GET:        api/employee                  Api\EmployeeController@index
     POST:       api/employee                  Api\EmployeeController@store
     GET:        api/employee/{employee}       Api\EmployeeController@show
-    PUT|PATCH:  api/employee/{employee}       Api\EmployeeController@destroy
+    PUT|PATCH:  api/employee/{employee}       Api\EmployeeController@update 
     DELETE:     api/employee/{employee}       Api\EmployeeController@destroy
 Image Intervantion 1
     Image Intervantion
@@ -392,3 +392,12 @@ Read Data and Search 2
 Edit,Delete,Unlinkimage 1
     https://sweetalert2.github.io/
 Edit,Delete,Unlinkimage 2
+Edit,Delete,Unlinkimage 3
+    php artisan cache:clear
+    php artisan config:cache
+    npm install
+    npm run dev
+    npm run watch
+    open console from browser (F12) then go to network and check and uncheck the disable cache then reload your page. 
+    something your browser using your old storage files.
+    

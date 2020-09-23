@@ -2835,7 +2835,7 @@ __webpack_require__.r(__webpack_exports__);
     axios.get('/api/employee/' + id).then(function (_ref) {
       var data = _ref.data;
       return _this.form = data;
-    })["catch"](console.log('error'));
+    });
   },
   data: function data() {
     return {
@@ -2846,6 +2846,7 @@ __webpack_require__.r(__webpack_exports__);
         salary: null,
         address: null,
         photo: null,
+        newphoto: null,
         nid: null,
         joining_date: null
       },
@@ -2868,16 +2869,18 @@ __webpack_require__.r(__webpack_exports__);
         var reader = new FileReader();
 
         reader.onload = function (event) {
+          _this2.form.newphoto = event.target.result;
           _this2.form.photo = event.target.result;
         };
 
         reader.readAsDataURL(file);
       }
     },
-    employeeInsert: function employeeInsert() {
+    employeeUpdate: function employeeUpdate() {
       var _this3 = this;
 
-      axios.post('/api/employee', this.form).then(function (res) {
+      var id = this.$route.params.id;
+      axios.patch('/api/employee/' + id, this.form).then(function (res) {
         _this3.$router.push({
           name: 'employee'
         });
@@ -47708,7 +47711,7 @@ var render = function() {
                       on: {
                         submit: function($event) {
                           $event.preventDefault()
-                          return _vm.employeeInsert($event)
+                          return _vm.employeeUpdate($event)
                         }
                       }
                     },
@@ -48072,7 +48075,7 @@ var staticRenderFns = [
       _c(
         "button",
         { staticClass: "btn btn-primary btn-block", attrs: { type: "submit" } },
-        [_vm._v("Submit")]
+        [_vm._v("Update")]
       )
     ])
   }

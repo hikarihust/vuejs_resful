@@ -91,7 +91,35 @@ class EmployeeController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $data = array();
+        $data['name'] = $request->name;
+        $data['email'] = $request->email;
+        $data['phone'] = $request->phone;
+        $data['salary'] = $request->salary;
+        $data['address'] = $request->address;
+        $data['nid'] = $request->nid;
+        $data['joining_date'] = $request->joining_date;
+        $image = $request->newphoto;
+
+        if ($image) {
+            $position = strpos($image, ';');
+            $sub = substr($image, 0, $position);
+            $ext = explode('/', $sub)[1];
+
+            $name = time().".".$ext;
+            $img = Image::make($image)->resize(240,200);
+            $upload_path = 'backend/employee/';
+            $image_url = $upload_path.$name;
+            $success = $img->save($image_url);
+
+            if ($success) {
+                $data['photo'] = $image_url;
+                $img = DB::table('employees')->where('id', $id)->first();
+                $image_path = $img->photo;
+                unlink($image_path);
+            }
+        }
+        DB::table('employees')->where('id', $id)->update($data);
     }
 
     /**
