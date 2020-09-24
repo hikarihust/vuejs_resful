@@ -423,4 +423,14 @@ Project Category CRUD 1
     php artisan make:controller Api/CategoryController --resource
     php artisan make:model Model/Category
 Project Category CRUD 2
+
+=======================================================================================================
+
+                                Create CRUD for Product
+                        
+Project Product CURD 1
+    php artisan make:migration create_products_table --create=products
+    php artisan migrate
+    php artisan make:controller Api/ProductController --resource
+    php artisan make:model Model/Product
     
