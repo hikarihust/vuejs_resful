@@ -422,3 +422,5 @@ Project Category CRUD 1
     php artisan migrate
     php artisan make:controller Api/CategoryController --resource
     php artisan make:model Model/Category
+Project Category CRUD 2
+    
