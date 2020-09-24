@@ -33,22 +33,14 @@
                                             <div class="form-row">
                                                 <div class="col-md-6">
                                                     <label for="exampleFormControlSelect1">Product Category</label>
-                                                    <select class="form-control" id="exampleFormControlSelect1">
-                                                        <option>1</option>
-                                                        <option>2</option>
-                                                        <option>3</option>
-                                                        <option>4</option>
-                                                        <option>5</option>
+                                                    <select class="form-control" id="exampleFormControlSelect1" v-model="form.category_id">
+                                                        <option :value="category.id" v-for="category in categories" :key="category.id">{{ category.category_name }}</option>
                                                     </select>
                                                 </div>
                                                 <div class="col-md-6">
                                                     <label for="exampleFormControlSelect1">Product Supplier</label>
-                                                    <select class="form-control" id="exampleFormControlSelect1">
-                                                        <option>1</option>
-                                                        <option>2</option>
-                                                        <option>3</option>
-                                                        <option>4</option>
-                                                        <option>5</option>
+                                                    <select class="form-control" id="exampleFormControlSelect1" v-model="form.supplier_id">
+                                                        <option :value="supplier.id" v-for="supplier in suppliers" :key="supplier.id">{{ supplier.name }}</option>
                                                     </select>
                                                 </div>
                                             </div>
@@ -122,20 +114,30 @@ export default {
         if (!User.loggedIn()) {
             this.$router.push({name: 'home'})
         }
+
+        axios.get('/api/category/')
+        .then(({data}) => (this.categories = data));
+
+        axios.get('/api/supplier/')
+        .then(({data}) => (this.suppliers = data));
     },
     data() {
         return {
             form:{
-                name: null,
-                email: null,
-                phone: null,
-                salary: null,
-                address: null,
-                photo: null,
-                nid: null,
-                joining_date: null
+                product_name: null,
+                product_code: null,
+                category_id: null,
+                supplier_id: null,
+                root: null,
+                buying_price: null,
+                selling_price: null,
+                buying_date: null,
+                image: null,
+                product_quantity: null
             },
-            errors:{}
+            errors:{},
+            categories:{},
+            suppliers:{},
         }
     },
 
@@ -151,7 +153,7 @@ export default {
             } else {
                 let reader = new FileReader();
                 reader.onload = event =>{
-                    this.form.photo = event.target.result;
+                    this.form.image = event.target.result;
                 };
                 reader.readAsDataURL(file);
             }
