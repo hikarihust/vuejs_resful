@@ -413,3 +413,12 @@ Project Supplier CRUD 1
 Project Supplier CRUD 2
 Project Supplier CRUD 3
     
+=======================================================================================================
+
+                                Create CRUD for Category
+
+Project Category CRUD 1
+    php artisan make:migration create_categories_table --create=categories
+    php artisan migrate
+    php artisan make:controller Api/CategoryController --resource
+    php artisan make:model Model/Category

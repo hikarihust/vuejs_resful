@@ -19,6 +19,11 @@ import Storesupplier from '../views/supplier/Create.vue';
 import Supplier from '../views/supplier/Index.vue';
 import Editsupplier from '../views/supplier/Edit.vue';
 
+// Category Component
+import Storecategory from '../views/category/Create.vue';
+import Category from '../views/category/Index.vue';
+import Editcategory from '../views/category/Edit.vue';
+
 Vue.use(VueRouter)
 
 const routes = [
@@ -37,6 +42,11 @@ const routes = [
     { path: '/store-supplier', component: Storesupplier, name:'store-supplier'},
     { path: '/supplier', component: Supplier, name:'supplier'},
     { path: '/edit-supplier/:id', component: Editsupplier, name:'edit-supplier'},
+
+    // Category Component
+    { path: '/store-category', component: Storecategory, name:'store-category'},
+    { path: '/category', component: Category, name:'category'},
+    { path: '/edit-category/:id', component: Editcategory, name:'edit-category'},
 ]
 
 const router = new VueRouter({
