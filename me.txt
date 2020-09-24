@@ -435,3 +435,4 @@ Project Product CURD 1
     php artisan make:model Model/Product
 Project Product CURD 2
 Project Product CURD 3
+Project Product CURD 4
