@@ -29,6 +29,11 @@ import Storeproduct from '../views/product/Create.vue';
 import Product from '../views/product/Index.vue';
 import Editproduct from '../views/product/Edit.vue';
 
+// Expense Routes
+import Storeexpense from '../views/expense/Create.vue';
+import Expense from '../views/expense/Index.vue';
+import Editexpense from '../views/expense/Edit.vue';
+
 Vue.use(VueRouter)
 
 const routes = [
@@ -57,6 +62,11 @@ const routes = [
     { path: '/store-product', component: Storeproduct, name:'store-product'},
     { path: '/product', component: Product, name:'product'},
     { path: '/edit-product/:id', component: Editproduct, name:'edit-product'},
+
+    // Expense Routes
+    { path: '/store-expense', component: Storeexpense, name:'store-expense'},
+    { path: '/expense', component: Expense, name:'expense'},
+    { path: '/edit-expense/:id', component: Editexpense, name:'edit-expense'},
 ]
 
 const router = new VueRouter({

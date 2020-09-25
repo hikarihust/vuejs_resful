@@ -88,6 +88,19 @@
                         </div>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseBootstrap4"
+                            aria-expanded="true" aria-controls="collapseBootstrap4">
+                        <i class="far fa-fw fa-window-maximize"></i>
+                        <span>Expense</span>
+                        </a>
+                        <div id="collapseBootstrap4" class="collapse" aria-labelledby="headingBootstrap" data-parent="#accordionSidebar">
+                            <div class="bg-white py-2 collapse-inner rounded">
+                                <router-link class="collapse-item" to="/store-expense">Add Expense</router-link>
+                                <router-link class="collapse-item" to="/expense">All Expense</router-link>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseForm" aria-expanded="true"
                             aria-controls="collapseForm">
                         <i class="fab fa-fw fa-wpforms"></i>
@@ -351,7 +364,7 @@
                 <footer class="sticky-footer bg-white">
                     <div class="container my-auto">
                         <div class="copyright text-center my-auto">
-                            <span>copyright &copy; <script> document.write(new Date().getFullYear()); </script> - developed by
+                            <span>copyright &copy; - developed by
                                 <b><a href="https://indrijunanda.gitlab.io/" target="_blank">Easy Learning</a></b>
                             </span>
                         </div>
