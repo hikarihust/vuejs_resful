@@ -48,13 +48,14 @@
 export default {
     created(){
         if (!User.loggedIn()) {
-            this.$router.push({expense_name: 'home'})
+            this.$router.push({name: '/'})
         }
     },
     data() {
         return {
             form:{
-                expense_name: null,
+                details: '',
+                amount: ''
             },
             errors:{}
         }

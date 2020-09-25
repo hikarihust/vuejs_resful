@@ -41,7 +41,7 @@
 export default {
     created(){
         if (!User.loggedIn()) {
-            this.$router.push({category_name: 'home'})
+            this.$router.push({category_name: '/'})
         }
     },
     data() {
