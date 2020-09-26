@@ -456,3 +456,12 @@ Employee Salary 1
 Employee Salary 2
 Salary 1
 Product stock
+
+=======================================================================================================
+
+                                Create CRUD for Customer Module
+Customer CRUD 1
+    php artisan make:migration create_customers_table --create=customers
+    php artisan migrate
+    php artisan make:controller Api/CustomerController --resource
+    php artisan make:model Model/Customer

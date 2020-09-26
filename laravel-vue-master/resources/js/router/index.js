@@ -46,6 +46,11 @@ import Editsalary from '../views/salary/Edit.vue';
 import Stock from '../views/product/Stock.vue';
 import Editstock from '../views/product/EditStock.vue';
 
+// Customer Component
+import Storecustomer from '../views/customer/Create.vue';
+import Customer from '../views/customer/Index.vue';
+import Editcustomer from '../views/customer/Edit.vue';
+
 Vue.use(VueRouter)
 
 const routes = [
@@ -91,6 +96,11 @@ const routes = [
     // Stock Routes
     { path: '/stock', component: Stock, name:'stock'},
     { path: '/edit-stock/:id', component: Editstock, name:'edit-stock'},
+
+    // Customer Routes
+    { path: '/store-customer', component: Storecustomer, name:'store-customer'},
+    { path: '/customer', component: Customer, name:'customer'},
+    { path: '/edit-customer/:id', component: Editcustomer, name:'edit-customer'},
 ]
 
 const router = new VueRouter({
