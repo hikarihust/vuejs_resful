@@ -17,7 +17,8 @@ class CustomerController extends Controller
      */
     public function index()
     {
-        //
+        $customer = DB::table('customers')->orderBy('id', 'DESC')->get();
+        return response()->json($customer);
     }
 
     /**
@@ -70,7 +71,8 @@ class CustomerController extends Controller
      */
     public function show($id)
     {
-        //
+        $customer = DB::table('customers')->where('id', $id)->first();
+        return response()->json($customer);
     }
 
     /**
@@ -82,7 +84,32 @@ class CustomerController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $data = array();
+        $data['name'] = $request->name;
+        $data['email'] = $request->email;
+        $data['phone'] = $request->phone;
+        $data['address'] = $request->address;
+        $image = $request->newphoto;
+
+        if ($image) {
+            $position = strpos($image, ';');
+            $sub = substr($image, 0, $position);
+            $ext = explode('/', $sub)[1];
+
+            $name = time().".".$ext;
+            $img = Image::make($image)->resize(240,200);
+            $upload_path = 'backend/customer/';
+            $image_url = $upload_path.$name;
+            $success = $img->save($image_url);
+
+            if ($success) {
+                $data['photo'] = $image_url;
+                $img = DB::table('customers')->where('id', $id)->first();
+                $image_path = $img->photo;
+                unlink($image_path);
+            }
+        }
+        DB::table('customers')->where('id', $id)->update($data);
     }
 
     /**
@@ -93,6 +120,13 @@ class CustomerController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $customer = DB::table('customers')->where('id', $id)->first();
+        $photo = $customer->photo;
+        if ($photo) {
+            unlink($photo);
+            DB::table('customers')->where('id', $id)->delete();
+        } else {
+            DB::table('customers')->where('id', $id)->delete();
+        }
     }
 }

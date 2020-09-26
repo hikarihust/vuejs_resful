@@ -465,3 +465,4 @@ Customer CRUD 1
     php artisan migrate
     php artisan make:controller Api/CustomerController --resource
     php artisan make:model Model/Customer
+Customer CRUD 2
