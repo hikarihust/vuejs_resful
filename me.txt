@@ -449,3 +449,7 @@ Expense CRUD 1
     php artisan make:model Model/Expense
 Expense CRUD 2
 Expense CRUD 3
+Employee Salary 1
+    php artisan make:migration create_salaries_table --create=salaries
+    php artisan migrate
+    php artisan make:controller Api/SalaryController
