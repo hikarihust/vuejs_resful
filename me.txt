@@ -454,3 +454,4 @@ Employee Salary 1
     php artisan migrate
     php artisan make:controller Api/SalaryController
 Employee Salary 2
+Salary 1

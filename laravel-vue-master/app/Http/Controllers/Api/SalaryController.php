@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\DB;
 
 class SalaryController extends Controller
 {
-    public function Paid(Request $request,$id){
+    public function paid(Request $request,$id){
 
         $request->validate([
             'salary_month' => 'required',
@@ -27,5 +27,14 @@ class SalaryController extends Controller
             $data['salary_year'] = date('Y');
             DB::table('salaries')->insert($data);
         }
+    }
+
+    public function allSalary(){
+        $salary = DB::table('salaries')->select('salary_month')->groupBy('salary_month')->get();
+        return response()->json($salary);
+    }
+
+    public function ViewSalary($id){
+
     }
 }

@@ -38,6 +38,9 @@ import Editexpense from '../views/expense/Edit.vue';
 import Salary from '../views/salary/AllEmployee.vue';
 import Paysalary from '../views/salary/Create.vue';
 
+import Allsalary from '../views/salary/Index.vue';
+import Viewsalary from '../views/salary/View.vue';
+
 Vue.use(VueRouter)
 
 const routes = [
@@ -75,6 +78,9 @@ const routes = [
     // Salary Routes
     { path: '/given-salary', component: Salary, name:'given-salary'},
     { path: '/pay-salary/:id', component: Paysalary, name:'pay-salary'},
+
+    { path: '/salary', component: Allsalary, name:'salary'},
+    { path: '/view-salary/:id', component: Viewsalary, name:'view-salary'},
 ]
 
 const router = new VueRouter({
