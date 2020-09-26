@@ -42,6 +42,10 @@ import Allsalary from '../views/salary/Index.vue';
 import Viewsalary from '../views/salary/View.vue';
 import Editsalary from '../views/salary/Edit.vue';
 
+// Stock Component
+import Stock from '../views/product/Stock.vue';
+import Editstock from '../views/product/EditStock.vue';
+
 Vue.use(VueRouter)
 
 const routes = [
@@ -83,6 +87,10 @@ const routes = [
     { path: '/salary', component: Allsalary, name:'salary'},
     { path: '/view-salary/:id', component: Viewsalary, name:'view-salary'},
     { path: '/edit-salary/:id', component: Editsalary, name:'edit-salary'},
+
+    // Stock Routes
+    { path: '/stock', component: Stock, name:'stock'},
+    { path: '/edit-stock/:id', component: Editstock, name:'edit-stock'},
 ]
 
 const router = new VueRouter({

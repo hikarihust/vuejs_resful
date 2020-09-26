@@ -455,4 +455,4 @@ Employee Salary 1
     php artisan make:controller Api/SalaryController
 Employee Salary 2
 Salary 1
-Salary 2
+Product stock
