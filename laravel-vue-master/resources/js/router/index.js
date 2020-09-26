@@ -51,6 +51,9 @@ import Storecustomer from '../views/customer/Create.vue';
 import Customer from '../views/customer/Index.vue';
 import Editcustomer from '../views/customer/Edit.vue';
 
+// POS Component
+import Pos from '../views/pos/Pointofsale.vue';
+
 Vue.use(VueRouter)
 
 const routes = [
@@ -101,6 +104,9 @@ const routes = [
     { path: '/store-customer', component: Storecustomer, name:'store-customer'},
     { path: '/customer', component: Customer, name:'customer'},
     { path: '/edit-customer/:id', component: Editcustomer, name:'edit-customer'},
+
+    // POS Component
+    { path: '/pos', component: Pos, name:'pos'},
 ]
 
 const router = new VueRouter({
