@@ -448,3 +448,4 @@ Expense CRUD 1
     php artisan make:controller Api/ExpenseController --resource
     php artisan make:model Model/Expense
 Expense CRUD 2
+Expense CRUD 3
