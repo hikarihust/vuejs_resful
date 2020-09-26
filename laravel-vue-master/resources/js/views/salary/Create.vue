@@ -87,43 +87,21 @@ export default {
     data() {
         return {
             form:{
-                name: null,
-                email: null,
-                phone: null,
-                salary: null,
-                address: null,
-                photo: null,
-                newphoto: null,
-                nid: null,
-                joining_date: null
+                name: '',
+                email: '',
+                salary_month: '',
+                salary: ''
             },
             errors:{}
         }
     },
 
     methods:{
-        onFileSelected(event){
-            let listFiles = event.target.files;
-            if(listFiles.length === 0) return;
-            let file = listFiles[0];
-            if(!/\/(jpe?g|png|gif|bmp)$/i.test(file.type)) {
-                Notification.image_ext_validation();
-            } else if(file.size > 1048576) {
-                Notification.image_size_validation();
-            } else {
-                let reader = new FileReader();
-                reader.onload = event =>{
-                    this.form.newphoto = event.target.result;
-                    this.form.photo = event.target.result;
-                };
-                reader.readAsDataURL(file);
-            }
-        },
         salaryPaid() {
             let id = this.$route.params.id;
-            axios.patch('/api/employee/' + id, this.form)
+            axios.post('/api/salary/paid/' + id,this.form)
             .then((res) => {
-                this.$router.push({ name: 'employee'});
+                this.$router.push({ name: 'given-salary'})
                 Notification.success();
             })
             .catch(error =>this.errors = error.response.data.errors)

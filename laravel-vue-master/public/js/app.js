@@ -4353,54 +4353,27 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {
       form: {
-        name: null,
-        email: null,
-        phone: null,
-        salary: null,
-        address: null,
-        photo: null,
-        newphoto: null,
-        nid: null,
-        joining_date: null
+        name: '',
+        email: '',
+        salary_month: '',
+        salary: ''
       },
       errors: {}
     };
   },
   methods: {
-    onFileSelected: function onFileSelected(event) {
+    salaryPaid: function salaryPaid() {
       var _this2 = this;
 
-      var listFiles = event.target.files;
-      if (listFiles.length === 0) return;
-      var file = listFiles[0];
-
-      if (!/\/(jpe?g|png|gif|bmp)$/i.test(file.type)) {
-        Notification.image_ext_validation();
-      } else if (file.size > 1048576) {
-        Notification.image_size_validation();
-      } else {
-        var reader = new FileReader();
-
-        reader.onload = function (event) {
-          _this2.form.newphoto = event.target.result;
-          _this2.form.photo = event.target.result;
-        };
-
-        reader.readAsDataURL(file);
-      }
-    },
-    salaryPaid: function salaryPaid() {
-      var _this3 = this;
-
       var id = this.$route.params.id;
-      axios.patch('/api/employee/' + id, this.form).then(function (res) {
-        _this3.$router.push({
-          name: 'employee'
+      axios.post('/api/salary/paid/' + id, this.form).then(function (res) {
+        _this2.$router.push({
+          name: 'given-salary'
         });
 
         Notification.success();
       })["catch"](function (error) {
-        return _this3.errors = error.response.data.errors;
+        return _this2.errors = error.response.data.errors;
       });
     }
   }
