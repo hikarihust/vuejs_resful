@@ -482,3 +482,8 @@ POS Design Dynamic Tab Search 4
                                 Create POS Add to Cart with Functions
 
 Load Customer in POS
+Project Cart Add, Remove 1
+    php artisan make:migration create_pos_table --create=pos
+    php artisan migrate
+    php artisan make:controller Api/CartController
+    php artisan make:model Model/Customer

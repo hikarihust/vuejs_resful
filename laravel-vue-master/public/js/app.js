@@ -4242,6 +4242,12 @@ __webpack_require__.r(__webpack_exports__);
     }
   },
   methods: {
+    // Cart Methods Here
+    AddToCart: function AddToCart(id) {
+      axios.get('/api/addToCart/' + id).then(function () {
+        Notification.cart_success();
+      })["catch"]();
+    },
     allProduct: function allProduct() {
       var _this3 = this;
 
@@ -53902,61 +53908,81 @@ var render = function() {
                                 staticClass: "col-lg-3 col-md-3 col-sm-6 col-6"
                               },
                               [
-                                _c("a", { attrs: { href: "#" } }, [
-                                  _c(
-                                    "div",
-                                    {
-                                      staticClass: "card",
-                                      staticStyle: {
-                                        width: "8.5rem",
-                                        "margin-bottom": "5px"
+                                _c(
+                                  "button",
+                                  {
+                                    staticClass: "btn btn-sm",
+                                    on: {
+                                      click: function($event) {
+                                        $event.preventDefault()
+                                        return _vm.AddToCart(product.id)
                                       }
-                                    },
-                                    [
-                                      _c("img", {
-                                        staticClass: "card-img-top",
-                                        attrs: {
-                                          src: product.image,
-                                          id: "em_photo"
+                                    }
+                                  },
+                                  [
+                                    _c(
+                                      "div",
+                                      {
+                                        staticClass: "card",
+                                        staticStyle: {
+                                          width: "8.5rem",
+                                          "margin-bottom": "5px"
                                         }
-                                      }),
-                                      _vm._v(" "),
-                                      _c("div", { staticClass: "card-body" }, [
-                                        _c(
-                                          "h6",
-                                          { staticClass: "card-title" },
-                                          [_vm._v(_vm._s(product.product_name))]
-                                        ),
+                                      },
+                                      [
+                                        _c("img", {
+                                          staticClass: "card-img-top",
+                                          attrs: {
+                                            src: product.image,
+                                            id: "em_photo"
+                                          }
+                                        }),
                                         _vm._v(" "),
-                                        product.product_quantity >= 1
-                                          ? _c(
-                                              "span",
-                                              {
-                                                staticClass:
-                                                  "badge badge-success"
-                                              },
+                                        _c(
+                                          "div",
+                                          { staticClass: "card-body" },
+                                          [
+                                            _c(
+                                              "h6",
+                                              { staticClass: "card-title" },
                                               [
                                                 _vm._v(
-                                                  "Available(" +
-                                                    _vm._s(
-                                                      product.product_quantity
-                                                    ) +
-                                                    ")"
+                                                  _vm._s(product.product_name)
                                                 )
                                               ]
-                                            )
-                                          : _c(
-                                              "span",
-                                              {
-                                                staticClass:
-                                                  "badge badge-danger"
-                                              },
-                                              [_vm._v("Stock Out ")]
-                                            )
-                                      ])
-                                    ]
-                                  )
-                                ])
+                                            ),
+                                            _vm._v(" "),
+                                            product.product_quantity >= 1
+                                              ? _c(
+                                                  "span",
+                                                  {
+                                                    staticClass:
+                                                      "badge badge-success"
+                                                  },
+                                                  [
+                                                    _vm._v(
+                                                      "Available(" +
+                                                        _vm._s(
+                                                          product.product_quantity
+                                                        ) +
+                                                        ")"
+                                                    )
+                                                  ]
+                                                )
+                                              : _c(
+                                                  "span",
+                                                  {
+                                                    staticClass:
+                                                      "badge badge-danger"
+                                                  },
+                                                  [_vm._v("Stock Out ")]
+                                                )
+                                          ]
+                                        )
+                                      ]
+                                    )
+                                  ]
+                                )
                               ]
                             )
                           }),
@@ -54011,57 +54037,77 @@ var render = function() {
                               staticClass: "col-lg-3 col-md-3 col-sm-6 col-6"
                             },
                             [
-                              _c("a", { attrs: { href: "#" } }, [
-                                _c(
-                                  "div",
-                                  {
-                                    staticClass: "card",
-                                    staticStyle: {
-                                      width: "8.5rem",
-                                      "margin-bottom": "5px"
+                              _c(
+                                "button",
+                                {
+                                  staticClass: "btn btn-sm",
+                                  on: {
+                                    click: function($event) {
+                                      $event.preventDefault()
+                                      return _vm.AddToCart(getproduct.id)
                                     }
-                                  },
-                                  [
-                                    _c("img", {
-                                      staticClass: "card-img-top",
-                                      attrs: {
-                                        src: getproduct.image,
-                                        id: "em_photo"
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "div",
+                                    {
+                                      staticClass: "card",
+                                      staticStyle: {
+                                        width: "8.5rem",
+                                        "margin-bottom": "5px"
                                       }
-                                    }),
-                                    _vm._v(" "),
-                                    _c("div", { staticClass: "card-body" }, [
-                                      _c("h6", { staticClass: "card-title" }, [
-                                        _vm._v(_vm._s(getproduct.product_name))
-                                      ]),
+                                    },
+                                    [
+                                      _c("img", {
+                                        staticClass: "card-img-top",
+                                        attrs: {
+                                          src: getproduct.image,
+                                          id: "em_photo"
+                                        }
+                                      }),
                                       _vm._v(" "),
-                                      getproduct.product_quantity >= 1
-                                        ? _c(
-                                            "span",
-                                            {
-                                              staticClass: "badge badge-success"
-                                            },
-                                            [
-                                              _vm._v(
-                                                "Available(" +
-                                                  _vm._s(
-                                                    getproduct.product_quantity
-                                                  ) +
-                                                  ")"
-                                              )
-                                            ]
-                                          )
-                                        : _c(
-                                            "span",
-                                            {
-                                              staticClass: "badge badge-danger"
-                                            },
-                                            [_vm._v("Stock Out ")]
-                                          )
-                                    ])
-                                  ]
-                                )
-                              ])
+                                      _c("div", { staticClass: "card-body" }, [
+                                        _c(
+                                          "h6",
+                                          { staticClass: "card-title" },
+                                          [
+                                            _vm._v(
+                                              _vm._s(getproduct.product_name)
+                                            )
+                                          ]
+                                        ),
+                                        _vm._v(" "),
+                                        getproduct.product_quantity >= 1
+                                          ? _c(
+                                              "span",
+                                              {
+                                                staticClass:
+                                                  "badge badge-success"
+                                              },
+                                              [
+                                                _vm._v(
+                                                  "Available(" +
+                                                    _vm._s(
+                                                      getproduct.product_quantity
+                                                    ) +
+                                                    ")"
+                                                )
+                                              ]
+                                            )
+                                          : _c(
+                                              "span",
+                                              {
+                                                staticClass:
+                                                  "badge badge-danger"
+                                              },
+                                              [_vm._v("Stock Out ")]
+                                            )
+                                      ])
+                                    ]
+                                  )
+                                ]
+                              )
                             ]
                           )
                         }),
@@ -73378,6 +73424,16 @@ var Notification = /*#__PURE__*/function () {
         type: 'error',
         layout: 'topRight',
         text: 'Upload Image less then 1MB ',
+        timeout: 1000
+      }).show();
+    }
+  }, {
+    key: "cart_success",
+    value: function cart_success() {
+      new Noty({
+        type: 'success',
+        layout: 'topRight',
+        text: 'Successfully Add to Cart!',
         timeout: 1000
       }).show();
     }
