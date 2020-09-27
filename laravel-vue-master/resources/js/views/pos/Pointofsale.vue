@@ -33,8 +33,8 @@
                             <li class="nav-item">
                                 <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">All Product </a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Profile </a>
+                            <li class="nav-item" v-for="category in categories" :key="category.id">
+                                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false" @click="subproduct(category.id)">{{ category.category_name }} </a>
                             </li>
                         </ul>
                         <div class="tab-content" id="myTabContent">
@@ -57,7 +57,23 @@
                                     </div>
                                 </div>
                             </div>  <!--  End TBAS HOME -->
-                            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab"></div>
+                            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                                <input type="text" v-model="getsearchTerm" class="form-control" style="width: 560px;" placeholder="Search Product">
+                                <div class="row">
+                                    <div class="col-lg-3 col-md-3 col-sm-6 col-6" v-for="getproduct in getfiltersearch" :key="getproduct.id">
+                                        <a href="#">
+                                            <div class="card" style="width: 8.5rem; margin-bottom: 5px;">
+                                                <img :src="getproduct.image" id="em_photo" class="card-img-top">
+                                                <div class="card-body">
+                                                    <h6 class="card-title">{{ getproduct.product_name }}</h6>
+                                                    <span class="badge badge-success" v-if="getproduct.product_quantity >= 1">Available({{ getproduct.product_quantity }})</span>
+                                                    <span class="badge badge-danger" v-else>Stock Out </span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -74,18 +90,27 @@ export default {
         }
 
         this.allProduct();
+        this.allCategory();
     },
 
     data() {
         return {
             products:[],
-            searchTerm:''
+            categories:[],
+            getproducts:[],
+            searchTerm:'',
+            getsearchTerm:'',
         }
     },
     computed:{
         filtersearch() {
             return this.products.filter(product => {
                 return product.product_name.match(this.searchTerm)
+            })
+        },
+       getfiltersearch(){
+            return this.getproducts.filter(getproduct => {
+                return getproduct.product_name.match(this.getsearchTerm)
             })
         }
     },
@@ -94,6 +119,16 @@ export default {
         allProduct(){
             axios.get('/api/product')
             .then(({data}) => (this.products = data))
+            .catch()
+        },
+        allCategory(){
+            axios.get('/api/category/')
+            .then(({data}) => (this.categories = data))
+            .catch()
+        },
+        subproduct(id){
+            axios.get('/api/getting/product/' + id)
+            .then(({data}) => (this.getproducts = data))
             .catch()
         }
     },
