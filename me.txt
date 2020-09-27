@@ -489,3 +489,7 @@ Project Cart Add, Remove 1
     php artisan make:model Model/Customer
 Project Cart Add, Remove 2
 Project Cart ++ Remove 1
+Project Cart ++ Remove 2
+    php artisan make:migration create_extra_table --create=extra
+    php artisan migrate
+    
