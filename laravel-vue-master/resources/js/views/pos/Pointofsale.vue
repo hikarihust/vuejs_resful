@@ -28,19 +28,16 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td><a href="#">Name</a></td>
-                                        <td>Qty</td>
-                                        <td>Unit</td>
-                                        <td>Total</td>
-                                        <td><a href="#" class="btn btn-sm btn-primary">X</a></td>
-                                    </tr>
-                                    <tr>
-                                        <td><a href="#">Name</a></td>
-                                        <td>Qty</td>
-                                        <td>Unit</td>
-                                        <td>Total</td>
-                                        <td><a href="#" class="btn btn-sm btn-primary">X</a></td>
+                                    <tr v-for="cart in carts" :key="cart.id">
+                                        <td>{{ cart.pro_name }}</td>
+                                        <td>
+                                            <input type="text" readonly="" style="width: 30px;" :value="cart.pro_quantity">
+                                            <button class="btn btn-sm btn-success">+</button>
+                                            <button class="btn btn-sm btn-danger">-</button>
+                                        </td>
+                                        <td>{{ cart.product_price  }}</td>
+                                        <td>{{ cart.sub_total }}</td>
+                                        <td><a @click="removeItem(cart.id)" class="btn btn-sm btn-primary"><font color="#ffffff">X</font></a></td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -152,6 +149,10 @@ export default {
         this.allProduct();
         this.allCategory();
         this.allCustomer();
+        this.cartProduct();
+        Reload.$on('AfterAdd', () =>{
+            this.cartProduct();
+        })
     },
 
     data() {
@@ -167,6 +168,7 @@ export default {
             getsearchTerm:'',
             customers:[],
             errors:null,
+            carts:[],
         }
     },
     computed:{
@@ -187,7 +189,21 @@ export default {
         AddToCart(id){
             axios.get('/api/addToCart/' + id)
                 .then(() => {
+                    Reload.$emit('AfterAdd');
                     Notification.cart_success()
+                })
+                .catch()
+        },
+        cartProduct(){
+            axios.get('/api/cart/product/')
+                .then(({data}) => (this.carts = data))
+                .catch()
+        },
+        removeItem(id){
+            axios.get('/api/remove/cart/' + id)
+                .then(() => {
+                    Reload.$emit('AfterAdd');
+                    Notification.cart_delete()
                 })
                 .catch()
         },
@@ -219,5 +235,10 @@ export default {
     #em_photo{
         height: 100px;
         width: 135px;
+    }
+
+    .card .table td, .card .table th {
+        padding-right: 0rem;
+        padding-left: -1rem;
     }
 </style>

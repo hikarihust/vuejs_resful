@@ -487,3 +487,4 @@ Project Cart Add, Remove 1
     php artisan migrate
     php artisan make:controller Api/CartController
     php artisan make:model Model/Customer
+Project Cart Add, Remove 2

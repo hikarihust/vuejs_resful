@@ -49,3 +49,5 @@ Route::Get('/getting/product/{id}', 'Api\PosController@getProduct');
 
 // Add to cart Route
 Route::Get('/addToCart/{id}', 'Api\CartController@addToCart');
+Route::Get('/cart/product', 'Api\CartController@cartProduct');
+Route::Get('/remove/cart/{id}', 'Api\CartController@removeCart');

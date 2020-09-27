@@ -30,8 +30,9 @@ const Toast = Swal.mixin({
 });
 
 window.Toast = Toast;
-
 // Sweet Alert End
+
+window.Reload = new Vue();
 
 Vue.use(VueRouter)
 
