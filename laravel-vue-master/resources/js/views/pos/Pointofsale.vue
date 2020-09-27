@@ -32,8 +32,9 @@
                                         <td>{{ cart.pro_name }}</td>
                                         <td>
                                             <input type="text" readonly="" style="width: 30px;" :value="cart.pro_quantity">
-                                            <button class="btn btn-sm btn-success">+</button>
-                                            <button class="btn btn-sm btn-danger">-</button>
+                                            <button @click.prevent="increment(cart.id)" class="btn btn-sm btn-success">+</button>
+                                            <button  @click.prevent="decrement(cart.id)" class="btn btn-sm btn-danger" v-if="cart.pro_quantity >= 2">-</button>
+                                            <button class="btn btn-sm btn-danger" v-else disabled="">-</button>
                                         </td>
                                         <td>{{ cart.product_price  }}</td>
                                         <td>{{ cart.sub_total }}</td>
@@ -204,6 +205,22 @@ export default {
                 .then(() => {
                     Reload.$emit('AfterAdd');
                     Notification.cart_delete()
+                })
+                .catch()
+        },
+        increment(id){
+            axios.get('/api/increment/' + id)
+                .then(() => {
+                    Reload.$emit('AfterAdd');
+                    Notification.success()
+                })
+                .catch()
+        },
+        decrement(id){
+            axios.get('/api/decrement/' + id)
+                .then(() => {
+                    Reload.$emit('AfterAdd');
+                    Notification.success()
                 })
                 .catch()
         },

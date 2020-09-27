@@ -4195,6 +4195,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   created: function created() {
     var _this = this;
@@ -4265,6 +4266,18 @@ __webpack_require__.r(__webpack_exports__);
       axios.get('/api/remove/cart/' + id).then(function () {
         Reload.$emit('AfterAdd');
         Notification.cart_delete();
+      })["catch"]();
+    },
+    increment: function increment(id) {
+      axios.get('/api/increment/' + id).then(function () {
+        Reload.$emit('AfterAdd');
+        Notification.success();
+      })["catch"]();
+    },
+    decrement: function decrement(id) {
+      axios.get('/api/decrement/' + id).then(function () {
+        Reload.$emit('AfterAdd');
+        Notification.success();
       })["catch"]();
     },
     allProduct: function allProduct() {
@@ -53701,15 +53714,40 @@ var render = function() {
                               _vm._v(" "),
                               _c(
                                 "button",
-                                { staticClass: "btn btn-sm btn-success" },
+                                {
+                                  staticClass: "btn btn-sm btn-success",
+                                  on: {
+                                    click: function($event) {
+                                      $event.preventDefault()
+                                      return _vm.increment(cart.id)
+                                    }
+                                  }
+                                },
                                 [_vm._v("+")]
                               ),
                               _vm._v(" "),
-                              _c(
-                                "button",
-                                { staticClass: "btn btn-sm btn-danger" },
-                                [_vm._v("-")]
-                              )
+                              cart.pro_quantity >= 2
+                                ? _c(
+                                    "button",
+                                    {
+                                      staticClass: "btn btn-sm btn-danger",
+                                      on: {
+                                        click: function($event) {
+                                          $event.preventDefault()
+                                          return _vm.decrement(cart.id)
+                                        }
+                                      }
+                                    },
+                                    [_vm._v("-")]
+                                  )
+                                : _c(
+                                    "button",
+                                    {
+                                      staticClass: "btn btn-sm btn-danger",
+                                      attrs: { disabled: "" }
+                                    },
+                                    [_vm._v("-")]
+                                  )
                             ]),
                             _vm._v(" "),
                             _c("td", [_vm._v(_vm._s(cart.product_price))]),
