@@ -475,3 +475,4 @@ POS Design Dynamic Tab Search 1
     php artisan make:controller Api/PosController
 POS Design Dynamic Tab Search 2
 POS Design Dynamic Tab Search 3
+POS Design Dynamic Tab Search 4
