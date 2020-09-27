@@ -499,3 +499,7 @@ Project Subtotal, Vat,Total etc
                                 Order Processing for POS
 
 Order Done 1
+Order Done 2
+    php artisan make:migration create_orders_table --create=orders
+    php artisan make:migration create_order_details_table --create=order_details
+    php artisan migrate
