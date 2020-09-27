@@ -46,16 +46,16 @@
                         <div class="card-footer">
                             <ul class="list-group">
                                 <li class="list-group-item d-flex justify-content-between align-items-center">Total Quantity:
-                                    <strong>56</strong>
+                                    <strong>{{ qty }}</strong>
                                 </li>
                                 <li class="list-group-item d-flex justify-content-between align-items-center">Sub Total:
-                                    <strong>233 $</strong>
+                                    <strong>{{ subtotal }} $</strong>
                                 </li>
                                 <li class="list-group-item d-flex justify-content-between align-items-center">Vat:
-                                    <strong>35%</strong>
+                                    <strong>{{ vats.vat }} %</strong>
                                 </li>
                                 <li class="list-group-item d-flex justify-content-between align-items-center">Total :
-                                    <strong>35323 $</strong>
+                                    <strong>{{ subtotal*vats.vat /100 + subtotal}} $</strong>
                                 </li>
                             </ul>
                             <br>
@@ -151,6 +151,7 @@ export default {
         this.allCategory();
         this.allCustomer();
         this.cartProduct();
+        this.vat();
         Reload.$on('AfterAdd', () =>{
             this.cartProduct();
         })
@@ -170,6 +171,7 @@ export default {
             customers:[],
             errors:null,
             carts:[],
+            vats:''
         }
     },
     computed:{
@@ -178,10 +180,28 @@ export default {
                 return product.product_name.match(this.searchTerm)
             })
         },
-       getfiltersearch(){
+        getfiltersearch(){
             return this.getproducts.filter(getproduct => {
                 return getproduct.product_name.match(this.getsearchTerm)
             })
+        },
+        qty(){
+            let sum = 0;
+            if(this.carts.length > 0) {
+                for(let i = 0; i < this.carts.length; i++){
+                    sum += (parseFloat(this.carts[i].pro_quantity));
+                }
+            }
+            return sum;
+        },
+        subtotal(){
+            let sum = 0;
+            if(this.carts.length > 0) {
+                for(let i = 0; i < this.carts.length; i++){
+                    sum += (parseFloat(this.carts[i].pro_quantity) * parseFloat(this.carts[i].product_price));
+                }
+            }
+            return sum;
         }
     },
 
@@ -223,6 +243,11 @@ export default {
                     Notification.success()
                 })
                 .catch()
+        },
+        vat(){
+            axios.get('/api/vats/')
+            .then(({data}) => (this.vats = data))
+            .catch()
         },
         allProduct(){
             axios.get('/api/product')

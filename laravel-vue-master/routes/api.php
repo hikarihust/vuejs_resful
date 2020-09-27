@@ -53,3 +53,6 @@ Route::Get('/cart/product', 'Api\CartController@cartProduct');
 Route::Get('/remove/cart/{id}', 'Api\CartController@removeCart');
 Route::Get('/increment/{id}', 'Api\CartController@increment');
 Route::Get('/decrement/{id}', 'Api\CartController@decrement');
+
+// Vat Route
+Route::Get('/vats', 'Api\CartController@vats');
