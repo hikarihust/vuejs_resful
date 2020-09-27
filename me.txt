@@ -476,3 +476,9 @@ POS Design Dynamic Tab Search 1
 POS Design Dynamic Tab Search 2
 POS Design Dynamic Tab Search 3
 POS Design Dynamic Tab Search 4
+
+=======================================================================================================
+
+                                Create POS Add to Cart with Functions
+
+Load Customer in POS
