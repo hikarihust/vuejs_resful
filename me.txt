@@ -493,3 +493,9 @@ Project Cart ++ Remove 2
     php artisan make:migration create_extra_table --create=extra
     php artisan migrate
 Project Subtotal, Vat,Total etc
+
+=======================================================================================================
+
+                                Order Processing for POS
+
+Order Done 1

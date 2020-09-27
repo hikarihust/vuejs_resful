@@ -56,3 +56,5 @@ Route::Get('/decrement/{id}', 'Api\CartController@decrement');
 
 // Vat Route
 Route::Get('/vats', 'Api\CartController@vats');
+
+Route::Post('/orderdone', 'Api\PosController@orderDone');
