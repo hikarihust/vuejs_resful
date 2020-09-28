@@ -65,3 +65,7 @@ Route::Get('/order/details/{id}', 'Api\OrderController@orderDetails');
 Route::Get('/order/orderdetails/{id}', 'Api\OrderController@orderDetailsAll');
 
 Route::Post('/search/order', 'Api\PosController@searchOrderDate');
+
+// Admin Dashboard Route
+Route::Get('/today/sell', 'Api\PosController@todaySell');
+Route::Get('/today/income', 'Api\PosController@todayIncome');
