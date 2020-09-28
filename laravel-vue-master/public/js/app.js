@@ -4245,114 +4245,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   created: function created() {
     var _this = this;
@@ -54254,227 +54146,47 @@ var render = function() {
       1
     ),
     _vm._v(" "),
-    _vm._m(0)
-  ])
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "row justify-content-center" }, [
+    _c("div", { staticClass: "row justify-content-center" }, [
       _c("div", { staticClass: "col-xl-12 col-lg-12 col-md-12" }, [
         _c("div", { staticClass: "card shadow-sm my-5" }, [
           _c("div", { staticClass: "card-body p-0" }, [
             _c("div", { staticClass: "row" }, [
               _c("div", { staticClass: "col-lg-12" }, [
                 _c("div", { staticClass: "login-form" }, [
-                  _c("div", { staticClass: "text-center" }, [
-                    _c("h1", { staticClass: "h4 text-gray-900 mb-4" }, [
-                      _vm._v("Order Details")
-                    ])
-                  ]),
+                  _vm._m(0),
                   _vm._v(" "),
                   _c("div", { staticClass: "row" }, [
                     _c("div", { staticClass: "col-lg-6 mb-4" }, [
                       _c("div", { staticClass: "card" }, [
-                        _c(
-                          "div",
-                          {
-                            staticClass:
-                              "card-header py-3 d-flex flex-row align-items-center justify-content-between"
-                          },
-                          [
-                            _c(
-                              "h6",
-                              {
-                                staticClass: "m-0 font-weight-bold text-primary"
-                              },
-                              [_vm._v("Simple Tables")]
-                            )
-                          ]
-                        ),
+                        _vm._m(1),
                         _vm._v(" "),
                         _c("div", { staticClass: "table-responsive" }, [
-                          _c(
-                            "table",
-                            {
-                              staticClass:
-                                "table align-items-center table-flush"
-                            },
-                            [
-                              _c("thead", { staticClass: "thead-light" }, [
-                                _c("tr", [
-                                  _c("th", [_vm._v("Order ID")]),
-                                  _vm._v(" "),
-                                  _c("th", [_vm._v("Customer")]),
-                                  _vm._v(" "),
-                                  _c("th", [_vm._v("Item")]),
-                                  _vm._v(" "),
-                                  _c("th", [_vm._v("Status")]),
-                                  _vm._v(" "),
-                                  _c("th", [_vm._v("Action")])
-                                ])
-                              ]),
-                              _vm._v(" "),
-                              _c("tbody", [
-                                _c("tr", [
-                                  _c("td", [
-                                    _c("a", { attrs: { href: "#" } }, [
-                                      _vm._v("RA0449")
-                                    ])
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("td", [_vm._v("Udin Wayang")]),
-                                  _vm._v(" "),
-                                  _c("td", [_vm._v("Nasi Padang")]),
-                                  _vm._v(" "),
-                                  _c("td", [
-                                    _c(
-                                      "span",
-                                      { staticClass: "badge badge-success" },
-                                      [_vm._v("Delivered")]
-                                    )
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("td", [
-                                    _c(
-                                      "a",
-                                      {
-                                        staticClass: "btn btn-sm btn-primary",
-                                        attrs: { href: "#" }
-                                      },
-                                      [_vm._v("Detail")]
-                                    )
-                                  ])
-                                ]),
-                                _vm._v(" "),
-                                _c("tr", [
-                                  _c("td", [
-                                    _c("a", { attrs: { href: "#" } }, [
-                                      _vm._v("RA5324")
-                                    ])
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("td", [_vm._v("Jaenab Bajigur")]),
-                                  _vm._v(" "),
-                                  _c("td", [_vm._v("Gundam 90' Edition")]),
-                                  _vm._v(" "),
-                                  _c("td", [
-                                    _c(
-                                      "span",
-                                      { staticClass: "badge badge-warning" },
-                                      [_vm._v("Shipping")]
-                                    )
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("td", [
-                                    _c(
-                                      "a",
-                                      {
-                                        staticClass: "btn btn-sm btn-primary",
-                                        attrs: { href: "#" }
-                                      },
-                                      [_vm._v("Detail")]
-                                    )
-                                  ])
-                                ]),
-                                _vm._v(" "),
-                                _c("tr", [
-                                  _c("td", [
-                                    _c("a", { attrs: { href: "#" } }, [
-                                      _vm._v("RA8568")
-                                    ])
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("td", [_vm._v("Rivat Mahesa")]),
-                                  _vm._v(" "),
-                                  _c("td", [_vm._v("Oblong T-Shirt")]),
-                                  _vm._v(" "),
-                                  _c("td", [
-                                    _c(
-                                      "span",
-                                      { staticClass: "badge badge-danger" },
-                                      [_vm._v("Pending")]
-                                    )
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("td", [
-                                    _c(
-                                      "a",
-                                      {
-                                        staticClass: "btn btn-sm btn-primary",
-                                        attrs: { href: "#" }
-                                      },
-                                      [_vm._v("Detail")]
-                                    )
-                                  ])
-                                ]),
-                                _vm._v(" "),
-                                _c("tr", [
-                                  _c("td", [
-                                    _c("a", { attrs: { href: "#" } }, [
-                                      _vm._v("RA1453")
-                                    ])
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("td", [_vm._v("Indri Junanda")]),
-                                  _vm._v(" "),
-                                  _c("td", [_vm._v("Hat Rounded")]),
-                                  _vm._v(" "),
-                                  _c("td", [
-                                    _c(
-                                      "span",
-                                      { staticClass: "badge badge-info" },
-                                      [_vm._v("Processing")]
-                                    )
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("td", [
-                                    _c(
-                                      "a",
-                                      {
-                                        staticClass: "btn btn-sm btn-primary",
-                                        attrs: { href: "#" }
-                                      },
-                                      [_vm._v("Detail")]
-                                    )
-                                  ])
-                                ]),
-                                _vm._v(" "),
-                                _c("tr", [
-                                  _c("td", [
-                                    _c("a", { attrs: { href: "#" } }, [
-                                      _vm._v("RA1998")
-                                    ])
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("td", [_vm._v("Udin Cilok")]),
-                                  _vm._v(" "),
-                                  _c("td", [_vm._v("Baby Powder")]),
-                                  _vm._v(" "),
-                                  _c("td", [
-                                    _c(
-                                      "span",
-                                      { staticClass: "badge badge-success" },
-                                      [_vm._v("Delivered")]
-                                    )
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("td", [
-                                    _c(
-                                      "a",
-                                      {
-                                        staticClass: "btn btn-sm btn-primary",
-                                        attrs: { href: "#" }
-                                      },
-                                      [_vm._v("Detail")]
-                                    )
-                                  ])
-                                ])
-                              ])
-                            ]
-                          )
+                          _c("ul", { staticClass: "list-group" }, [
+                            _c("li", { staticClass: "list-group-item" }, [
+                              _c("b", [_vm._v("Name :")]),
+                              _vm._v(" " + _vm._s(_vm.orders.name) + " ")
+                            ]),
+                            _vm._v(" "),
+                            _c("li", { staticClass: "list-group-item" }, [
+                              _c("b", [_vm._v("Phone :")]),
+                              _vm._v(" " + _vm._s(_vm.orders.phone))
+                            ]),
+                            _vm._v(" "),
+                            _c("li", { staticClass: "list-group-item" }, [
+                              _c("b", [_vm._v("Address :")]),
+                              _vm._v(" " + _vm._s(_vm.orders.address))
+                            ]),
+                            _vm._v(" "),
+                            _c("li", { staticClass: "list-group-item" }, [
+                              _c("b", [_vm._v("Date :")]),
+                              _vm._v(" " + _vm._s(_vm.orders.order_date))
+                            ]),
+                            _vm._v(" "),
+                            _c("li", { staticClass: "list-group-item" }, [
+                              _c("b", [_vm._v("Pay Through :")]),
+                              _vm._v(" " + _vm._s(_vm.orders.payby))
+                            ])
+                          ])
                         ]),
                         _vm._v(" "),
                         _c("div", { staticClass: "card-footer" })
@@ -54483,203 +54195,35 @@ var staticRenderFns = [
                     _vm._v(" "),
                     _c("div", { staticClass: "col-lg-6 mb-4" }, [
                       _c("div", { staticClass: "card" }, [
-                        _c(
-                          "div",
-                          {
-                            staticClass:
-                              "card-header py-3 d-flex flex-row align-items-center justify-content-between"
-                          },
-                          [
-                            _c(
-                              "h6",
-                              {
-                                staticClass: "m-0 font-weight-bold text-primary"
-                              },
-                              [_vm._v("Simple Tables")]
-                            )
-                          ]
-                        ),
+                        _vm._m(2),
                         _vm._v(" "),
                         _c("div", { staticClass: "table-responsive" }, [
-                          _c(
-                            "table",
-                            {
-                              staticClass:
-                                "table align-items-center table-flush"
-                            },
-                            [
-                              _c("thead", { staticClass: "thead-light" }, [
-                                _c("tr", [
-                                  _c("th", [_vm._v("Order ID")]),
-                                  _vm._v(" "),
-                                  _c("th", [_vm._v("Customer")]),
-                                  _vm._v(" "),
-                                  _c("th", [_vm._v("Item")]),
-                                  _vm._v(" "),
-                                  _c("th", [_vm._v("Status")]),
-                                  _vm._v(" "),
-                                  _c("th", [_vm._v("Action")])
-                                ])
-                              ]),
-                              _vm._v(" "),
-                              _c("tbody", [
-                                _c("tr", [
-                                  _c("td", [
-                                    _c("a", { attrs: { href: "#" } }, [
-                                      _vm._v("RA0449")
-                                    ])
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("td", [_vm._v("Udin Wayang")]),
-                                  _vm._v(" "),
-                                  _c("td", [_vm._v("Nasi Padang")]),
-                                  _vm._v(" "),
-                                  _c("td", [
-                                    _c(
-                                      "span",
-                                      { staticClass: "badge badge-success" },
-                                      [_vm._v("Delivered")]
-                                    )
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("td", [
-                                    _c(
-                                      "a",
-                                      {
-                                        staticClass: "btn btn-sm btn-primary",
-                                        attrs: { href: "#" }
-                                      },
-                                      [_vm._v("Detail")]
-                                    )
-                                  ])
-                                ]),
-                                _vm._v(" "),
-                                _c("tr", [
-                                  _c("td", [
-                                    _c("a", { attrs: { href: "#" } }, [
-                                      _vm._v("RA5324")
-                                    ])
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("td", [_vm._v("Jaenab Bajigur")]),
-                                  _vm._v(" "),
-                                  _c("td", [_vm._v("Gundam 90' Edition")]),
-                                  _vm._v(" "),
-                                  _c("td", [
-                                    _c(
-                                      "span",
-                                      { staticClass: "badge badge-warning" },
-                                      [_vm._v("Shipping")]
-                                    )
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("td", [
-                                    _c(
-                                      "a",
-                                      {
-                                        staticClass: "btn btn-sm btn-primary",
-                                        attrs: { href: "#" }
-                                      },
-                                      [_vm._v("Detail")]
-                                    )
-                                  ])
-                                ]),
-                                _vm._v(" "),
-                                _c("tr", [
-                                  _c("td", [
-                                    _c("a", { attrs: { href: "#" } }, [
-                                      _vm._v("RA8568")
-                                    ])
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("td", [_vm._v("Rivat Mahesa")]),
-                                  _vm._v(" "),
-                                  _c("td", [_vm._v("Oblong T-Shirt")]),
-                                  _vm._v(" "),
-                                  _c("td", [
-                                    _c(
-                                      "span",
-                                      { staticClass: "badge badge-danger" },
-                                      [_vm._v("Pending")]
-                                    )
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("td", [
-                                    _c(
-                                      "a",
-                                      {
-                                        staticClass: "btn btn-sm btn-primary",
-                                        attrs: { href: "#" }
-                                      },
-                                      [_vm._v("Detail")]
-                                    )
-                                  ])
-                                ]),
-                                _vm._v(" "),
-                                _c("tr", [
-                                  _c("td", [
-                                    _c("a", { attrs: { href: "#" } }, [
-                                      _vm._v("RA1453")
-                                    ])
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("td", [_vm._v("Indri Junanda")]),
-                                  _vm._v(" "),
-                                  _c("td", [_vm._v("Hat Rounded")]),
-                                  _vm._v(" "),
-                                  _c("td", [
-                                    _c(
-                                      "span",
-                                      { staticClass: "badge badge-info" },
-                                      [_vm._v("Processing")]
-                                    )
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("td", [
-                                    _c(
-                                      "a",
-                                      {
-                                        staticClass: "btn btn-sm btn-primary",
-                                        attrs: { href: "#" }
-                                      },
-                                      [_vm._v("Detail")]
-                                    )
-                                  ])
-                                ]),
-                                _vm._v(" "),
-                                _c("tr", [
-                                  _c("td", [
-                                    _c("a", { attrs: { href: "#" } }, [
-                                      _vm._v("RA1998")
-                                    ])
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("td", [_vm._v("Udin Cilok")]),
-                                  _vm._v(" "),
-                                  _c("td", [_vm._v("Baby Powder")]),
-                                  _vm._v(" "),
-                                  _c("td", [
-                                    _c(
-                                      "span",
-                                      { staticClass: "badge badge-success" },
-                                      [_vm._v("Delivered")]
-                                    )
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("td", [
-                                    _c(
-                                      "a",
-                                      {
-                                        staticClass: "btn btn-sm btn-primary",
-                                        attrs: { href: "#" }
-                                      },
-                                      [_vm._v("Detail")]
-                                    )
-                                  ])
-                                ])
-                              ])
-                            ]
-                          )
+                          _c("ul", { staticClass: "list-group" }, [
+                            _c("li", { staticClass: "list-group-item" }, [
+                              _c("b", [_vm._v("Sub Total :")]),
+                              _vm._v(" " + _vm._s(_vm.orders.sub_total) + " $ ")
+                            ]),
+                            _vm._v(" "),
+                            _c("li", { staticClass: "list-group-item" }, [
+                              _c("b", [_vm._v("Vat :")]),
+                              _vm._v(" " + _vm._s(_vm.orders.vat) + " $")
+                            ]),
+                            _vm._v(" "),
+                            _c("li", { staticClass: "list-group-item" }, [
+                              _c("b", [_vm._v("Total :")]),
+                              _vm._v(" " + _vm._s(_vm.orders.total) + " $")
+                            ]),
+                            _vm._v(" "),
+                            _c("li", { staticClass: "list-group-item" }, [
+                              _c("b", [_vm._v("Pay Amount :")]),
+                              _vm._v(" " + _vm._s(_vm.orders.pay) + " $")
+                            ]),
+                            _vm._v(" "),
+                            _c("li", { staticClass: "list-group-item" }, [
+                              _c("b", [_vm._v("Due Amount :")]),
+                              _vm._v(" " + _vm._s(_vm.orders.due) + " $")
+                            ])
+                          ])
                         ]),
                         _vm._v(" "),
                         _c("div", { staticClass: "card-footer" })
@@ -54690,22 +54234,7 @@ var staticRenderFns = [
                   _c("div", { staticClass: "row" }, [
                     _c("div", { staticClass: "col-lg-12 mb-4" }, [
                       _c("div", { staticClass: "card" }, [
-                        _c(
-                          "div",
-                          {
-                            staticClass:
-                              "card-header py-3 d-flex flex-row align-items-center justify-content-between"
-                          },
-                          [
-                            _c(
-                              "h6",
-                              {
-                                staticClass: "m-0 font-weight-bold text-primary"
-                              },
-                              [_vm._v("Simple Tables")]
-                            )
-                          ]
-                        ),
+                        _vm._m(3),
                         _vm._v(" "),
                         _c("div", { staticClass: "table-responsive" }, [
                           _c(
@@ -54715,176 +54244,46 @@ var staticRenderFns = [
                                 "table align-items-center table-flush"
                             },
                             [
-                              _c("thead", { staticClass: "thead-light" }, [
-                                _c("tr", [
-                                  _c("th", [_vm._v("Order ID")]),
-                                  _vm._v(" "),
-                                  _c("th", [_vm._v("Customer")]),
-                                  _vm._v(" "),
-                                  _c("th", [_vm._v("Item")]),
-                                  _vm._v(" "),
-                                  _c("th", [_vm._v("Status")]),
-                                  _vm._v(" "),
-                                  _c("th", [_vm._v("Action")])
-                                ])
-                              ]),
+                              _vm._m(4),
                               _vm._v(" "),
-                              _c("tbody", [
-                                _c("tr", [
-                                  _c("td", [
-                                    _c("a", { attrs: { href: "#" } }, [
-                                      _vm._v("RA0449")
+                              _c(
+                                "tbody",
+                                _vm._l(_vm.details, function(detail) {
+                                  return _c("tr", { key: detail.id }, [
+                                    _c("td", [
+                                      _vm._v(_vm._s(detail.product_name))
+                                    ]),
+                                    _vm._v(" "),
+                                    _c("td", [
+                                      _vm._v(_vm._s(detail.product_code))
+                                    ]),
+                                    _vm._v(" "),
+                                    _c("td", [
+                                      _c("img", {
+                                        attrs: {
+                                          src: "/" + detail.image,
+                                          id: "em_photo"
+                                        }
+                                      })
+                                    ]),
+                                    _vm._v(" "),
+                                    _c("td", [
+                                      _vm._v(_vm._s(detail.pro_quantity))
+                                    ]),
+                                    _vm._v(" "),
+                                    _c("td", [
+                                      _vm._v(
+                                        _vm._s(detail.product_price) + " $"
+                                      )
+                                    ]),
+                                    _vm._v(" "),
+                                    _c("td", [
+                                      _vm._v(_vm._s(detail.sub_total) + " $")
                                     ])
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("td", [_vm._v("Udin Wayang")]),
-                                  _vm._v(" "),
-                                  _c("td", [_vm._v("Nasi Padang")]),
-                                  _vm._v(" "),
-                                  _c("td", [
-                                    _c(
-                                      "span",
-                                      { staticClass: "badge badge-success" },
-                                      [_vm._v("Delivered")]
-                                    )
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("td", [
-                                    _c(
-                                      "a",
-                                      {
-                                        staticClass: "btn btn-sm btn-primary",
-                                        attrs: { href: "#" }
-                                      },
-                                      [_vm._v("Detail")]
-                                    )
                                   ])
-                                ]),
-                                _vm._v(" "),
-                                _c("tr", [
-                                  _c("td", [
-                                    _c("a", { attrs: { href: "#" } }, [
-                                      _vm._v("RA5324")
-                                    ])
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("td", [_vm._v("Jaenab Bajigur")]),
-                                  _vm._v(" "),
-                                  _c("td", [_vm._v("Gundam 90' Edition")]),
-                                  _vm._v(" "),
-                                  _c("td", [
-                                    _c(
-                                      "span",
-                                      { staticClass: "badge badge-warning" },
-                                      [_vm._v("Shipping")]
-                                    )
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("td", [
-                                    _c(
-                                      "a",
-                                      {
-                                        staticClass: "btn btn-sm btn-primary",
-                                        attrs: { href: "#" }
-                                      },
-                                      [_vm._v("Detail")]
-                                    )
-                                  ])
-                                ]),
-                                _vm._v(" "),
-                                _c("tr", [
-                                  _c("td", [
-                                    _c("a", { attrs: { href: "#" } }, [
-                                      _vm._v("RA8568")
-                                    ])
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("td", [_vm._v("Rivat Mahesa")]),
-                                  _vm._v(" "),
-                                  _c("td", [_vm._v("Oblong T-Shirt")]),
-                                  _vm._v(" "),
-                                  _c("td", [
-                                    _c(
-                                      "span",
-                                      { staticClass: "badge badge-danger" },
-                                      [_vm._v("Pending")]
-                                    )
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("td", [
-                                    _c(
-                                      "a",
-                                      {
-                                        staticClass: "btn btn-sm btn-primary",
-                                        attrs: { href: "#" }
-                                      },
-                                      [_vm._v("Detail")]
-                                    )
-                                  ])
-                                ]),
-                                _vm._v(" "),
-                                _c("tr", [
-                                  _c("td", [
-                                    _c("a", { attrs: { href: "#" } }, [
-                                      _vm._v("RA1453")
-                                    ])
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("td", [_vm._v("Indri Junanda")]),
-                                  _vm._v(" "),
-                                  _c("td", [_vm._v("Hat Rounded")]),
-                                  _vm._v(" "),
-                                  _c("td", [
-                                    _c(
-                                      "span",
-                                      { staticClass: "badge badge-info" },
-                                      [_vm._v("Processing")]
-                                    )
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("td", [
-                                    _c(
-                                      "a",
-                                      {
-                                        staticClass: "btn btn-sm btn-primary",
-                                        attrs: { href: "#" }
-                                      },
-                                      [_vm._v("Detail")]
-                                    )
-                                  ])
-                                ]),
-                                _vm._v(" "),
-                                _c("tr", [
-                                  _c("td", [
-                                    _c("a", { attrs: { href: "#" } }, [
-                                      _vm._v("RA1998")
-                                    ])
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("td", [_vm._v("Udin Cilok")]),
-                                  _vm._v(" "),
-                                  _c("td", [_vm._v("Baby Powder")]),
-                                  _vm._v(" "),
-                                  _c("td", [
-                                    _c(
-                                      "span",
-                                      { staticClass: "badge badge-success" },
-                                      [_vm._v("Delivered")]
-                                    )
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("td", [
-                                    _c(
-                                      "a",
-                                      {
-                                        staticClass: "btn btn-sm btn-primary",
-                                        attrs: { href: "#" }
-                                      },
-                                      [_vm._v("Detail")]
-                                    )
-                                  ])
-                                ])
-                              ])
+                                }),
+                                0
+                              )
                             ]
                           )
                         ]),
@@ -54898,6 +54297,89 @@ var staticRenderFns = [
             ])
           ])
         ])
+      ])
+    ])
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "text-center" }, [
+      _c("h1", { staticClass: "h4 text-gray-900 mb-4" }, [
+        _vm._v("Order Details")
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass:
+          "card-header py-3 d-flex flex-row align-items-center justify-content-between"
+      },
+      [
+        _c("h6", { staticClass: "m-0 font-weight-bold text-primary" }, [
+          _vm._v("Order Details")
+        ])
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass:
+          "card-header py-3 d-flex flex-row align-items-center justify-content-between"
+      },
+      [
+        _c("h6", { staticClass: "m-0 font-weight-bold text-primary" }, [
+          _vm._v("Order Details")
+        ])
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass:
+          "card-header py-3 d-flex flex-row align-items-center justify-content-between"
+      },
+      [
+        _c("h6", { staticClass: "m-0 font-weight-bold text-primary" }, [
+          _vm._v("Order Details")
+        ])
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("thead", { staticClass: "thead-light" }, [
+      _c("tr", [
+        _c("th", [_vm._v("Product Name")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("Product Code")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("Image")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("Qty")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("Unit Price ")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("Total ")])
       ])
     ])
   }
