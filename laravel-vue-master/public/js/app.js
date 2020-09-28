@@ -4185,6 +4185,43 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   created: function created() {
     if (!User.loggedIn()) {
@@ -54290,6 +54327,48 @@ var render = function() {
           ])
         ])
       ])
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "row" }, [
+      _c("div", { staticClass: "col-lg-12 mb-4" }, [
+        _c("div", { staticClass: "card" }, [
+          _vm._m(3),
+          _vm._v(" "),
+          _c("div", { staticClass: "table-responsive" }, [
+            _c(
+              "table",
+              { staticClass: "table align-items-center table-flush" },
+              [
+                _vm._m(4),
+                _vm._v(" "),
+                _c(
+                  "tbody",
+                  _vm._l(_vm.orders, function(order) {
+                    return _c("tr", { key: order.id }, [
+                      _c("td", [_vm._v(_vm._s(order.name))]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v(_vm._s(order.qty))]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v(_vm._s(order.sub_total))]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v(_vm._s(order.vat))]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v(_vm._s(order.total) + " $")]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v(_vm._s(order.pay) + " $")]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v(_vm._s(order.due) + " $")])
+                    ])
+                  }),
+                  0
+                )
+              ]
+            )
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "card-footer" })
+        ])
+      ])
     ])
   ])
 }
@@ -54322,6 +54401,45 @@ var staticRenderFns = [
         { staticClass: "btn btn-primary btn-block", attrs: { type: "submit" } },
         [_vm._v("Search")]
       )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass:
+          "card-header py-3 d-flex flex-row align-items-center justify-content-between"
+      },
+      [
+        _c("h6", { staticClass: "m-0 font-weight-bold text-primary" }, [
+          _vm._v("Order Details")
+        ])
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("thead", { staticClass: "thead-light" }, [
+      _c("tr", [
+        _c("th", [_vm._v("Product Name")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("Qty")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("SubTotal")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("Vat")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("Total ")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("Pay ")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("Due ")])
+      ])
     ])
   }
 ]
