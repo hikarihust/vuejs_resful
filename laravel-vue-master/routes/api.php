@@ -63,3 +63,5 @@ Route::Post('/orderdone', 'Api\PosController@orderDone');
 Route::Get('/orders', 'Api\OrderController@todayOrder');
 Route::Get('/order/details/{id}', 'Api\OrderController@orderDetails');
 Route::Get('/order/orderdetails/{id}', 'Api\OrderController@orderDetailsAll');
+
+Route::Post('/search/order', 'Api\PosController@searchOrderDate');

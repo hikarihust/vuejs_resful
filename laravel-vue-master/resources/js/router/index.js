@@ -57,6 +57,7 @@ import Pos from '../views/pos/Pointofsale.vue';
 // Order Component
 import Order from '../views/order/Order.vue';
 import Vieworder from '../views/order/Vieworder.vue';
+import Searchorder from '../views/order/Search.vue';
 
 Vue.use(VueRouter)
 
@@ -115,6 +116,7 @@ const routes = [
     // Order Routes
     { path: '/order', component: Order, name:'order'},
     { path: '/view-order/:id', component: Vieworder, name:'view-order'},
+    { path: '/searchorder', component: Searchorder, name:'searchorder'},
 ]
 
 const router = new VueRouter({
