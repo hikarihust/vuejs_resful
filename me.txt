@@ -510,3 +510,4 @@ Order Details 3
 Project Search
 Sell, Income, Due, Expense
 Search Report 1
+Search Report 2

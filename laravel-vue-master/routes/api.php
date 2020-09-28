@@ -69,3 +69,6 @@ Route::Post('/search/order', 'Api\PosController@searchOrderDate');
 // Admin Dashboard Route
 Route::Get('/today/sell', 'Api\PosController@todaySell');
 Route::Get('/today/income', 'Api\PosController@todayIncome');
+Route::Get('/today/due', 'Api\PosController@todayDue');
+Route::Get('/today/expense', 'Api\PosController@todayExpense');
+Route::Get('/today/stockout', 'Api\PosController@stockout');
