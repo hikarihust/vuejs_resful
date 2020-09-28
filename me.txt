@@ -505,3 +505,4 @@ Order Done 2
     php artisan migrate
 Order Details 1
     php artisan make:controller Api/OrderController
+Order Details 2
