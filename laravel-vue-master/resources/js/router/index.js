@@ -54,6 +54,9 @@ import Editcustomer from '../views/customer/Edit.vue';
 // POS Component
 import Pos from '../views/pos/Pointofsale.vue';
 
+// Order Component
+import Order from '../views/order/order.vue';
+
 Vue.use(VueRouter)
 
 const routes = [
@@ -107,6 +110,9 @@ const routes = [
 
     // POS Component
     { path: '/pos', component: Pos, name:'pos'},
+
+    // Order Routes
+    { path: '/order', component: Order, name:'order'},
 ]
 
 const router = new VueRouter({

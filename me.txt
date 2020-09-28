@@ -503,3 +503,5 @@ Order Done 2
     php artisan make:migration create_orders_table --create=orders
     php artisan make:migration create_order_details_table --create=order_details
     php artisan migrate
+Order Details 1
+    php artisan make:controller Api/OrderController
